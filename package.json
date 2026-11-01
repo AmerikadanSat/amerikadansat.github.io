@@ -1,0 +1,19 @@
+{
+  "name": "amerikadansat.github.io",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun run index.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@minify-html/node": "^0.18.1",
+    "eta": "^4.6.0"
+  }
+}
