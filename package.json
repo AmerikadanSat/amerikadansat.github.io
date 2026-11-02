@@ -4,8 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "generate": "bun run index.ts",
-    "build": "bun run index.ts"
+    "generate": "bun run index.ts ; bunx @tailwindcss/cli -i ./src/css/site.css -o ./docs/css/site.css --minify"
   },
   "devDependencies": {
     "@types/bun": "^1.4.4"
@@ -15,6 +14,8 @@
   },
   "dependencies": {
     "@minify-html/node": "^0.18.1",
-    "eta": "^4.6.0"
+    "@tailwindcss/cli": "^4.3.3",
+    "eta": "^4.6.0",
+    "tailwindcss": "^4.3.3"
   }
 }

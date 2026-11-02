@@ -1,6 +1,6 @@
 <% page={ "language" : "tr" , ...it }; %>
 <!doctype html>
-<html lang="<%= page.language%>">
+<html lang="<%= page.language%>" class="scroll-smooth">
 	<%~ include("./head", page) %>
 
 	<body>

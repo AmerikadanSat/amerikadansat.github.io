@@ -97,14 +97,14 @@ async function generateSitemaps(htmlFiles: string[]): Promise<void> {
     ].join("\n");
 
     await Bun.write(join(OUTPUT_PATH, "sitemap.xml"), xmlSitemap);
-    console.log("Generated sitemap.xml");
+    console.log("/sitemap.xml");
 
     const txtSitemap = pages.length > 0
         ? pages.map(({ url }) => url).join("\n") + "\n"
         : "";
 
     await Bun.write(join(OUTPUT_PATH, "sitemap.txt"), txtSitemap);
-    console.log("Generated sitemap.txt");
+    console.log("/sitemap.txt");
 }
 
 await Bun.$`mkdir -p ${OUTPUT_PATH}`;
