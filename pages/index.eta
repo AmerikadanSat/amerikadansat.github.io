@@ -1,0 +1,9 @@
+<%
+page={
+    "title": "E-Ticaretinizi Amerika'ya Taşıyın",
+    "navigation": [],
+    ...it
+};
+%>
+<% layout("../layouts/tr/default", page) %>
+<h1>Esenlikler Dünya</h1>

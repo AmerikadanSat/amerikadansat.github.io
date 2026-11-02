@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"editor.unicodeHighlight.allowedCharacters": {
+			"ı": true
+		},
+		"liveServer.settings.root": "docs/",
+		"files.associations": {
+			"*.eta": "html"
+		}
+	},
+}
