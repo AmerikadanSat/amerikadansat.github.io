@@ -1,0 +1,17 @@
+<%
+page = {
+    "title": "Sign In | Play",
+    "description": "Sign in to your Play account.",
+    "siteName": "Play",
+    "language": "en",
+    "authMode": "signin",
+    "banner": {
+        "title": "Sign In Page",
+        "breadcrumb": "Sign In"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/tr/default", page) %>
+<%~ include("/partials/play/banner", page) %>
+<%~ include("/partials/play/auth", page) %>

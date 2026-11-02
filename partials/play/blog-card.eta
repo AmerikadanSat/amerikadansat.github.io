@@ -1,0 +1,34 @@
+<%
+const post = it.post ?? {};
+const image = post.image ?? "blog-01.jpg";
+const date = post.date ?? "Dec 22, 2023";
+const title = post.title ?? "Meet AutoManage, the best AI management tools";
+const description = post.description ?? "Lorem Ipsum is simply dummy text of the printing and typesetting industry.";
+const href = post.href ?? "/blog-details.html";
+const delay = post.delay ?? ".1s";
+%>
+<div class="mb-10 wow fadeInUp group" data-wow-delay="<%= delay %>">
+  <div class="mb-8 overflow-hidden rounded-[5px]">
+    <a href="<%= href %>" class="block" aria-label="<%= title %>">
+      <img
+        src="/assets/images/blog/<%= image %>"
+        alt=""
+        class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+      />
+    </a>
+  </div>
+  <div>
+    <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
+      <%= date %>
+    </span>
+    <h3>
+      <a
+        href="<%= href %>"
+        class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+      >
+        <%= title %>
+      </a>
+    </h3>
+    <p class="max-w-[370px] text-base text-body-color dark:text-dark-6"><%= description %></p>
+  </div>
+</div>

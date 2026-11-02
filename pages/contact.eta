@@ -1,0 +1,16 @@
+<%
+page = {
+    "title": "Contact | Play",
+    "description": "Get in touch with the Play team about your next startup, SaaS, or app project.",
+    "siteName": "Play",
+    "language": "en",
+    "banner": {
+        "title": "Contact Page",
+        "breadcrumb": "Contact us"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/tr/default", page) %>
+<%~ include("/partials/play/banner", page) %>
+<%~ include("/partials/play/contact", page) %>

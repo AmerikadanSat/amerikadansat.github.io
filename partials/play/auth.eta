@@ -1,0 +1,135 @@
+<%
+const mode = it.authMode ?? "signin";
+const isSignUp = mode === "signup";
+const sectionClass = isSignUp ? "py-14 lg:py-[90px]" : "py-14 lg:py-20";
+const cardClass = isSignUp ? "rounded-xl shadow-form" : "rounded-lg";
+const submitLabel = isSignUp ? "Sign Up" : "Sign In";
+const fieldClass = "w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-body-color transition outline-hidden placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-dark-6 dark:focus:border-primary";
+%>
+<section class="bg-[#F4F7FF] dark:bg-dark <%= sectionClass %>">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full px-4">
+        <div
+          class="wow fadeInUp relative mx-auto max-w-[525px] overflow-hidden bg-white px-8 py-14 text-center dark:bg-dark-2 sm:px-12 md:px-[60px] <%= cardClass %>"
+          data-wow-delay=".15s"
+        >
+          <div class="mb-10 text-center">
+            <a href="/" class="mx-auto inline-block max-w-[160px]" aria-label="Play home">
+              <img src="/assets/images/logo/logo.svg" alt="Play" class="w-full dark:hidden" width="132" height="46" />
+              <img src="/assets/images/logo/logo-white.svg" alt="Play" class="hidden w-full dark:block" width="132" height="46" />
+            </a>
+          </div>
+          <form action="#" method="post">
+            <% if (isSignUp) { %>
+              <div class="mb-[22px]">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  autocomplete="name"
+                  required
+                  class="<%= fieldClass %>"
+                />
+              </div>
+            <% } %>
+            <div class="mb-[22px]">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                autocomplete="email"
+                required
+                class="<%= fieldClass %>"
+              />
+            </div>
+            <div class="mb-[22px]">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                autocomplete="<%= isSignUp ? "new-password" : "current-password" %>"
+                required
+                class="<%= fieldClass %>"
+              />
+            </div>
+            <div class="mb-9">
+              <input
+                type="submit"
+                value="<%= submitLabel %>"
+                class="w-full cursor-pointer rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
+              />
+            </div>
+          </form>
+          <span class="relative z-1 mb-7 block text-center">
+            <span class="absolute left-0 top-1/2 -z-1 block h-px w-full bg-stroke dark:bg-dark-3"></span>
+            <span class="relative z-10 inline-block bg-white px-3 text-base text-body-secondary dark:bg-dark-2">Connect With</span>
+          </span>
+          <ul class="mb-9 flex -mx-2 justify-between">
+            <li class="w-full px-2">
+              <a
+                href="#"
+                onclick="return false;"
+                aria-label="Sign in with Facebook"
+                class="flex h-11 items-center justify-center rounded-md bg-[#4064AC] transition hover:bg-[#4064AC]/90"
+              >
+                <%~ include("/partials/play/icons/auth-facebook", page) %>
+              </a>
+            </li>
+            <li class="w-full px-2">
+              <a
+                href="#"
+                onclick="return false;"
+                aria-label="Sign in with Twitter"
+                class="flex h-11 items-center justify-center rounded-md bg-[#1C9CEA] transition hover:bg-[#1C9CEA]/90"
+              >
+                <%~ include("/partials/play/icons/auth-twitter", page) %>
+              </a>
+            </li>
+            <li class="w-full px-2">
+              <a
+                href="#"
+                onclick="return false;"
+                aria-label="Sign in with Google"
+                class="flex h-11 items-center justify-center rounded-md bg-[#D64937] transition hover:bg-[#D64937]/90"
+              >
+                <%~ include("/partials/play/icons/auth-google", page) %>
+              </a>
+            </li>
+          </ul>
+          <% if (isSignUp) { %>
+            <p class="mb-4 text-base text-body-secondary">
+              By creating an account you are agree with our
+              <a href="#" onclick="return false;" class="text-primary hover:underline">Privacy</a>
+              and
+              <a href="#" onclick="return false;" class="text-primary hover:underline">Policy</a>
+            </p>
+            <p class="text-base text-body-secondary">
+              Already have an account?
+              <a href="/signin.html" class="text-primary hover:underline">Sign In</a>
+            </p>
+          <% } else { %>
+            <a
+              href="#"
+              onclick="return false;"
+              class="mb-2 inline-block text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+            >
+              Forget Password?
+            </a>
+            <p class="text-base text-body-secondary">
+              Not a member yet?
+              <a href="/signup.html" class="text-primary hover:underline">Sign Up</a>
+            </p>
+          <% } %>
+
+          <span class="absolute right-1 top-1">
+            <%~ include("/partials/play/icons/auth-dots-top", page) %>
+          </span>
+          <span class="absolute bottom-1 left-1">
+            <%~ include("/partials/play/icons/auth-dots-bottom", page) %>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

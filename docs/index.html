@@ -47,7 +47,10 @@
 </head>
 
 	<body>
-		<header class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header">
+		<header
+  class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header"
+  data-header-overlay="true"
+>
   <div class="container px-4 mx-auto">
     <div class="relative flex items-center justify-between -mx-4">
       <div class="max-w-full px-4 w-60">
@@ -118,7 +121,7 @@
                 </li>
                               <li class="relative group">
                   <a
-                    href="#blog"
+                    href="/blog-grids.html"
                     class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 lg:ml-7 xl:ml-10"
                   >
                     Blog                  </a>
@@ -126,7 +129,7 @@
                             <li class="relative submenu-item group">
                 <a
                   href="#"
-                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-dark group-hover:text-primary dark:text-white lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70 xl:ml-10"
+                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 xl:ml-10 text-dark dark:text-white lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
                   aria-expanded="false"
                   aria-haspopup="true"
                 >
@@ -145,25 +148,45 @@
                 </a>
                 <div class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
                                       <a
-                      href="#features"
-                      class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                    >
-                      Features                    </a>
+                      href="/about.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      About Page                    </a>
                                       <a
-                      href="#testimonials"
-                      class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                    >
-                      Testimonials                    </a>
+                      href="/pricing.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Pricing Page                    </a>
                                       <a
-                      href="#faq"
-                      class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                    >
-                      FAQ                    </a>
+                      href="/contact.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Contact Page                    </a>
                                       <a
-                      href="#brands"
-                      class="block rounded-sm px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                    >
-                      Brands                    </a>
+                      href="/blog-grids.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Blog Grid Page                    </a>
+                                      <a
+                      href="/blog-details.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Blog Details Page                    </a>
+                                      <a
+                      href="/signup.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Sign Up Page                    </a>
+                                      <a
+                      href="/signin.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      Sign In Page                    </a>
+                                      <a
+                      href="/404.html"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary text-body-color dark:text-dark-6"
+                                          >
+                      404 Page                    </a>
                                   </div>
               </li>
             </ul>
@@ -225,14 +248,14 @@
           </label>
           <div class="hidden sm:flex">
             <a
-              href="javascript:void(0)"
-              class="loginBtn px-[22px] py-2 text-base font-medium text-white hover:opacity-70"
+              href="/signin.html"
+              class="loginBtn px-[22px] py-2 text-base font-medium hover:opacity-70 text-white"
             >
               Sign In
             </a>
             <a
-              href="javascript:void(0)"
-              class="px-6 py-2 text-base font-medium text-white duration-300 ease-in-out rounded-md bg-white/20 signUpBtn hover:bg-white/100 hover:text-dark"
+              href="/signup.html"
+              class="px-6 py-2 text-base font-medium duration-300 ease-in-out rounded-md signUpBtn bg-white/20 text-white hover:bg-white hover:text-dark"
             >
               Sign Up
             </a>
@@ -3931,87 +3954,78 @@
     <div class="flex flex-wrap -mx-4">
               <div class="w-full px-4 md:w-1/2 lg:w-1/3">
           <div class="mb-10 wow fadeInUp group" data-wow-delay=".1s">
-            <div class="mb-8 overflow-hidden rounded-[5px]">
-              <a href="#blog" class="block" aria-label="Meet AutoManage, the best AI management tools">
-                <img
-                  src="/assets/images/blog/blog-01.jpg"
-                  alt=""
-                  class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                />
-              </a>
-            </div>
-            <div>
-              <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
-                Dec 22, 2023              </span>
-              <h3>
-                <a
-                  href="#blog"
-                  class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  Meet AutoManage, the best AI management tools                </a>
-              </h3>
-              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
-              </p>
-            </div>
-          </div>
+  <div class="mb-8 overflow-hidden rounded-[5px]">
+    <a href="#blog" class="block" aria-label="Meet AutoManage, the best AI management tools">
+      <img
+        src="/assets/images/blog/blog-01.jpg"
+        alt=""
+        class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+      />
+    </a>
+  </div>
+  <div>
+    <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
+      Dec 22, 2023    </span>
+    <h3>
+      <a
+        href="#blog"
+        class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+      >
+        Meet AutoManage, the best AI management tools      </a>
+    </h3>
+    <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+</div>
         </div>
               <div class="w-full px-4 md:w-1/2 lg:w-1/3">
           <div class="mb-10 wow fadeInUp group" data-wow-delay=".15s">
-            <div class="mb-8 overflow-hidden rounded-[5px]">
-              <a href="#blog" class="block" aria-label="How to earn more money as a wellness coach">
-                <img
-                  src="/assets/images/blog/blog-02.jpg"
-                  alt=""
-                  class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                />
-              </a>
-            </div>
-            <div>
-              <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
-                Mar 15, 2023              </span>
-              <h3>
-                <a
-                  href="#blog"
-                  class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  How to earn more money as a wellness coach                </a>
-              </h3>
-              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
-              </p>
-            </div>
-          </div>
+  <div class="mb-8 overflow-hidden rounded-[5px]">
+    <a href="#blog" class="block" aria-label="How to earn more money as a wellness coach">
+      <img
+        src="/assets/images/blog/blog-02.jpg"
+        alt=""
+        class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+      />
+    </a>
+  </div>
+  <div>
+    <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
+      Mar 15, 2023    </span>
+    <h3>
+      <a
+        href="#blog"
+        class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+      >
+        How to earn more money as a wellness coach      </a>
+    </h3>
+    <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+</div>
         </div>
               <div class="w-full px-4 md:w-1/2 lg:w-1/3">
           <div class="mb-10 wow fadeInUp group" data-wow-delay=".2s">
-            <div class="mb-8 overflow-hidden rounded-[5px]">
-              <a href="#blog" class="block" aria-label="The no-fuss guide to upselling and cross selling">
-                <img
-                  src="/assets/images/blog/blog-03.jpg"
-                  alt=""
-                  class="w-full transition group-hover:rotate-6 group-hover:scale-125"
-                />
-              </a>
-            </div>
-            <div>
-              <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
-                Jan 05, 2023              </span>
-              <h3>
-                <a
-                  href="#blog"
-                  class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
-                >
-                  The no-fuss guide to upselling and cross selling                </a>
-              </h3>
-              <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry.
-              </p>
-            </div>
-          </div>
+  <div class="mb-8 overflow-hidden rounded-[5px]">
+    <a href="#blog" class="block" aria-label="The no-fuss guide to upselling and cross selling">
+      <img
+        src="/assets/images/blog/blog-03.jpg"
+        alt=""
+        class="w-full transition group-hover:rotate-6 group-hover:scale-125"
+      />
+    </a>
+  </div>
+  <div>
+    <span class="mb-6 inline-block rounded-[5px] bg-primary px-4 py-0.5 text-center text-xs font-medium leading-loose text-white">
+      Jan 05, 2023    </span>
+    <h3>
+      <a
+        href="#blog"
+        class="inline-block mb-4 text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+      >
+        The no-fuss guide to upselling and cross selling      </a>
+    </h3>
+    <p class="max-w-[370px] text-base text-body-color dark:text-dark-6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  </div>
+</div>
         </div>
           </div>
   </div>
@@ -4221,7 +4235,7 @@
     <div class="flex flex-wrap -mx-4">
       <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
         <div class="w-full mb-10">
-          <a href="#home" class="mb-6 inline-block max-w-[160px]" aria-label="Play home">
+          <a href="/" class="mb-6 inline-block max-w-[160px]" aria-label="Play home">
             <img src="/assets/images/logo/logo-white.svg" alt="Play" class="max-w-full" width="132" height="46" />
           </a>
           <p class="mb-8 max-w-[270px] text-base text-gray-7">
@@ -4319,16 +4333,16 @@
           <h4 class="text-lg font-semibold text-white mb-9">About Us</h4>
           <ul>
                           <li>
-                <a href="#home" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Home</a>
+                <a href="/#home" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Home</a>
               </li>
                           <li>
-                <a href="#features" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Features</a>
+                <a href="/#features" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Features</a>
               </li>
                           <li>
-                <a href="#about" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">About</a>
+                <a href="/#about" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">About</a>
               </li>
                           <li>
-                <a href="#testimonials" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Testimonial</a>
+                <a href="/#testimonials" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">Testimonial</a>
               </li>
                       </ul>
         </div>
@@ -4339,7 +4353,7 @@
           <ul>
                           <li>
                 <a
-                  href="#features"
+                  href="/#features"
                                     class="inline-block mb-3 text-base text-gray-7 hover:text-primary"
                 >How it works</a>
               </li>
@@ -4407,15 +4421,15 @@
         <div class="w-full mb-10">
           <h4 class="text-lg font-semibold text-white mb-9">Latest blog</h4>
           <div class="flex flex-col gap-8">
-                          <a href="#blog" class="group flex items-center gap-[22px]">
+                          <a href="/blog-details.html" class="group flex items-center gap-[22px]">
                 <div class="overflow-hidden rounded-sm">
-                  <img src="/assets/images/blog/blog-footer-01.jpg" alt="" loading="lazy" />
+                  <img src="/assets/images/blog/blog-footer-01.jpg" alt="" />
                 </div>
                 <span class="max-w-[180px] text-base text-gray-7 group-hover:text-white">I think really important to design with...</span>
               </a>
-                          <a href="#blog" class="group flex items-center gap-[22px]">
+                          <a href="/blog-details.html" class="group flex items-center gap-[22px]">
                 <div class="overflow-hidden rounded-sm">
-                  <img src="/assets/images/blog/blog-footer-02.jpg" alt="" loading="lazy" />
+                  <img src="/assets/images/blog/blog-footer-02.jpg" alt="" />
                 </div>
                 <span class="max-w-[180px] text-base text-gray-7 group-hover:text-white">Recognizing the need is the primary...</span>
               </a>

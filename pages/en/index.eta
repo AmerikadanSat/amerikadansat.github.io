@@ -5,6 +5,7 @@ page = {
     "siteName": "Play",
     "language": "en",
     "navigation": [],
+    "headerOverlay": true,
     ...it
 };
 %>

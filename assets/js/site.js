@@ -9,14 +9,16 @@
     if (!header) return;
 
     const isSticky = window.scrollY > header.offsetTop;
+    const isOverlay = header.dataset.headerOverlay === "true";
+    const isDark = root.classList.contains("dark");
     header.classList.toggle("sticky", isSticky);
 
     const logo = document.querySelector(".header-logo");
     if (logo) {
-      const isDark = root.classList.contains("dark");
-      logo.src = isSticky && !isDark
-        ? "/assets/images/logo/logo.svg"
-        : "/assets/images/logo/logo-white.svg";
+      const useLightLogo = isSticky ? isDark : isOverlay || isDark;
+      logo.src = useLightLogo
+        ? "/assets/images/logo/logo-white.svg"
+        : "/assets/images/logo/logo.svg";
     }
 
     const backToTop = document.querySelector(".back-to-top");
@@ -79,7 +81,11 @@
   }
 
   function initScrollSpy() {
-    const links = Array.from(document.querySelectorAll(".ud-menu-scroll"));
+    const links = Array.from(document.querySelectorAll(".ud-menu-scroll")).filter(
+      function (link) {
+        return (link.getAttribute("href") || "").startsWith("#");
+      },
+    );
     if (!links.length) return;
 
     function updateActiveLink() {
