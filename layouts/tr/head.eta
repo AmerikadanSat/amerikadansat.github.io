@@ -1,39 +1,52 @@
+<%
+const siteName = it.siteName ?? "Play";
+const title = it.title ?? "Play | Free Tailwind CSS Template for Startup and SaaS By TailGrids";
+const description = it.description ?? "Play is a free Tailwind CSS template for startups, SaaS products, apps, and more.";
+const canonical = it.canonical ?? `https://amerikadansat.com${it.path ?? "/"}`;
+const socialImage = it.socialImage ?? "https://amerikadansat.com/assets/images/hero/hero-image.jpg";
+%>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="Amazon, Amazon Dropshipping, Amazon FBA, Amerikada Sat, Amerikada Ticaret, Amerikada Depo, Dropshipping, E-Commerce, E-Ticaret, E-Ticaret Alt Yapısı, E-Ticaret Çağı, E-Ticaret Çözümleri, E-Ticaret Danışmanı, E-Ticaret Danışmanlığı, E-Ticaret Desteği, E-Ticarete Başlıyorum, E-Ticaret Eğitim, E-Ticaret Eğitimi, E-Ticaret Firmaları, E-Ticaretin-Olmazsa-Olmazı, E-Ticaret Kutusu, E-Ticaret Nasıl Yapılır, E-Ticaret Paketi, E-Ticaret Paketleri, E-Ticaret Sitesi, E-Ticaret Sitesi Kurmak, E-Ticaret Uzmanı, E-Ticaret Yazılımı, E-Ticaret Yönetimi, FBA, Fullfillment, Ticaret" />
-	<title><%= it.title %> | Amerika&apos;dan Sat</title>
-	<meta name="author" content="Amerika&apos;&apos;dan Sat">
-	<meta name="robots" content="index, follow">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#3758f9" />
+	<title><%= title %></title>
+	<meta name="description" content="<%= description %>" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="<%= canonical %>" />
 
-	<!-- SEO Meta Etiketleri -->
-	<meta name="description" content="Amerika&apos;da e-ticaret işinizi kurun! Şirket kuruluşu, depo hizmetleri, sipariş gönderimi ve dijital pazarlama desteği ile Amerika&apos;dan satış yapın.">
-	<meta name="keywords" content="Amerika&apos;dan satış, e-ticaret, Amazon FBM, şirket kurulumu, Amerika&apos;da iş, marka tescili, sipariş gönderimi">
+	<!-- Social media metadata -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="<%= siteName %>" />
+	<meta property="og:title" content="<%= title %>" />
+	<meta property="og:description" content="<%= description %>" />
+	<meta property="og:url" content="<%= canonical %>" />
+	<meta property="og:image" content="<%= socialImage %>" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="<%= title %>" />
+	<meta name="twitter:description" content="<%= description %>" />
+	<meta name="twitter:image" content="<%= socialImage %>" />
 
-	<!-- Sosyal Medya Meta Etiketleri -->
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Amerika&apos;dan Sat">
-	<meta property="og:title" content="Amerika&apos;dan Sat - E-Ticaretinizi Amerika&apos;ya Taşıyın">
-	<meta property="og:description" content="Amerika&apos;da e-ticaret işinizi kurmak ve başarıyla işletmek için ihtiyacınız olan tüm hizmetler burada!">
-	<meta property="og:url" content="https://AmerikadanSat.com">
-	<meta property="og:image" content="https://AmerikadanSat.com/og-image.jpg">
+	<link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
 
-	<!-- Twitter Kart Etiketleri -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:creator" content="@AmerikadanSat">
-	<meta name="twitter:title" content="Amerika&apos;dan Sat - E-Ticaretinizi Amerika&apos;ya Taşıyın">
-	<meta name="twitter:description" content="Amerika&apos;da e-ticaret işinizi kurmak ve başarıyla işletmek için ihtiyacınız olan tüm hizmetler burada!">
-	<meta name="twitter:image" content="https://AmerikadanSat.com/twitter-image.jpg">
-	<meta name="twitter:image:alt" content="Amerika&apos;dan Sat Logo">
-	<meta name="twitter:site" content="@AmerikadanSat">
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem("theme");
+				var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+				if (saved === "dark" || (!saved && prefersDark)) {
+					document.documentElement.classList.add("dark");
+				}
+			} catch (error) {}
+		})();
+	</script>
 
-	<title>Amerika&apos;dan Sat - ABD&apos;de E-Ticaretinizi Başlatın</title>
-	<link rel="canonical" href="https://AmerikadanSat.com">
-
-	<!-- Favicon -->
-	<link href="/favicons/favicon.ico" rel="shortcut icon" />
-
-	<!-- Stylesheets -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="/assets/css/animate.css" />
 	<link rel="stylesheet" href="/css/site.css" />
-
 </head>

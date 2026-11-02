@@ -1,5 +1,5 @@
 import { Eta } from "eta";
-import { readdir, stat } from "node:fs/promises";
+import { cp, readdir, rm, stat } from "node:fs/promises";
 import { join, extname, relative, sep } from "node:path";
 import { Buffer } from "node:buffer";
 import { minify } from "@minify-html/node";
@@ -107,7 +107,15 @@ async function generateSitemaps(htmlFiles: string[]): Promise<void> {
     console.log("/sitemap.txt");
 }
 
+async function copyAssets(): Promise<void> {
+    const targetPath = join(OUTPUT_PATH, "assets");
+    await rm(targetPath, { recursive: true, force: true });
+    await cp("assets", targetPath, { recursive: true });
+    console.log("/assets");
+}
+
 await Bun.$`mkdir -p ${OUTPUT_PATH}`;
 
 const generatedPages = await getEtaFiles(PAGES_PATH);
+await copyAssets();
 await generateSitemaps(generatedPages);

@@ -1,14 +1,17 @@
-<% page={ "language" : "tr" , ...it }; %>
+<% page={ "language" : "en" , ...it }; %>
 <!doctype html>
-<html lang="<%= page.language%>" class="scroll-smooth">
+<html lang="<%= page.language %>" class="scroll-smooth">
 	<%~ include("./head", page) %>
 
 	<body>
 		<%~ include("./navigation", page) %>
-		<div>
+		<main>
 			<%~ it.body %>
-		</div>
+		</main>
 		<%~ include("./footer", page) %>
-	</body>
 
+		<script src="/assets/js/wow.min.js" defer></script>
+		<script src="/assets/js/swiper-bundle.min.js" defer></script>
+		<script src="/assets/js/site.js" defer></script>
+	</body>
 </html>

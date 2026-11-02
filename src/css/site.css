@@ -1,1 +1,234 @@
 @import "tailwindcss";
+
+@source "../../layouts/**/*.eta";
+@source "../../pages/**/*.eta";
+@source "../../partials/**/*.eta";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-sm: 540px;
+  --breakpoint-md: 720px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1140px;
+  --breakpoint-2xl: 1320px;
+
+  --color-dark-700: #090e34b3;
+  --color-dark: #111928;
+  --color-dark-2: #1f2a37;
+  --color-dark-3: #374151;
+  --color-dark-6: #9ca3af;
+  --color-primary: #3758f9;
+  --color-blue-dark: #1b44c8;
+  --color-secondary: #13c296;
+  --color-body-color: #637381;
+  --color-body-secondary: #8899a8;
+  --color-stroke: #dfe4ea;
+  --color-gray-1: #f9fafb;
+  --color-gray-2: #f3f4f6;
+  --color-gray-7: #ced4da;
+
+  --shadow-1: 0px 1px 3px 0px rgba(166, 175, 195, 0.4);
+  --shadow-2: 0px 5px 12px 0px rgba(0, 0, 0, 0.1);
+  --shadow-form: 0px 1px 55px -11px rgba(0, 0, 0, 0.01);
+  --shadow-pricing: 0px 0px 40px 0px rgba(0, 0, 0, 0.08);
+  --shadow-testimonial: 0px 10px 20px 0px rgba(92, 115, 160, 0.07);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  [id] {
+    scroll-margin-top: 90px;
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+@media (width >= 540px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (width >= 720px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (width >= 960px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (width >= 1140px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (width >= 1320px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+.z-999 {
+  z-index: 999;
+}
+
+.sticky {
+  position: fixed;
+  z-index: 9999;
+  background-color: color-mix(in oklab, var(--color-white) 80%, transparent);
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, translate, scale, rotate, filter, backdrop-filter;
+  transition-timing-function: var(--default-transition-timing-function);
+  transition-duration: var(--default-transition-duration);
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.dark .sticky {
+  background-color: color-mix(in oklab, var(--color-dark) 80%, transparent);
+}
+
+.sticky .navbar-logo {
+  padding-block: calc(var(--spacing) * 2);
+}
+
+.sticky #navbarToggler span {
+  background-color: var(--color-dark);
+}
+
+.dark .sticky #navbarToggler span {
+  background-color: var(--color-white);
+}
+
+.sticky #navbarCollapse li > a {
+  color: var(--color-dark);
+}
+
+.sticky #navbarCollapse li > a:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.dark .sticky #navbarCollapse li > a {
+  color: var(--color-white);
+}
+
+.dark .sticky #navbarCollapse li > a:hover {
+  color: var(--color-primary);
+}
+
+#navbarCollapse li .ud-menu-scroll.active {
+  opacity: 0.7;
+}
+
+.sticky #navbarCollapse li .ud-menu-scroll.active {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.sticky .loginBtn {
+  color: var(--color-dark);
+}
+
+.sticky .loginBtn:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
+
+.dark .sticky .loginBtn {
+  color: var(--color-white);
+}
+
+.dark .sticky .loginBtn:hover {
+  color: var(--color-primary);
+}
+
+.sticky .signUpBtn {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.sticky .signUpBtn:hover {
+  background-color: var(--color-blue-dark);
+  color: var(--color-white);
+}
+
+.sticky #themeSwitcher ~ span {
+  color: var(--color-dark);
+}
+
+.dark .sticky #themeSwitcher ~ span {
+  color: var(--color-white);
+}
+
+.navbarTogglerActive > span:nth-child(1) {
+  top: 7px;
+  rotate: 45deg;
+}
+
+.navbarTogglerActive > span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbarTogglerActive > span:nth-child(3) {
+  top: -8px;
+  rotate: 135deg;
+}
+
+.common-carousel .swiper-button-next::after,
+.common-carousel .swiper-button-prev::after {
+  display: none;
+}
+
+.common-carousel .swiper-button-next,
+.common-carousel .swiper-button-prev {
+  position: static !important;
+  margin: 0;
+  height: calc(var(--spacing) * 12);
+  width: calc(var(--spacing) * 12);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0px 8px 15px 0px rgba(72, 72, 138, 0.08);
+  transition-duration: 200ms;
+  transition-timing-function: var(--ease-out);
+}
+
+.common-carousel .swiper-button-next:hover,
+.common-carousel .swiper-button-prev:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: none;
+}
+
+.dark .common-carousel .swiper-button-next,
+.dark .common-carousel .swiper-button-prev {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.common-carousel .swiper-button-next svg,
+.common-carousel .swiper-button-prev svg {
+  height: auto;
+  width: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,66 @@
+<%
+const features = [
+  {
+    icon: "feature-1",
+    title: "Free and Open-Source",
+    description: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    delay: ".1s"
+  },
+  {
+    icon: "feature-2",
+    title: "Multipurpose Template",
+    description: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    delay: ".15s"
+  },
+  {
+    icon: "feature-3",
+    title: "High-quality Design",
+    description: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    delay: ".2s"
+  },
+  {
+    icon: "feature-4",
+    title: "All Essential Elements",
+    description: "Lorem Ipsum is simply dummy text of the printing and industry.",
+    delay: ".25s"
+  }
+];
+%>
+<section id="features" class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
+          <span class="block mb-2 text-lg font-semibold text-primary">Features</span>
+          <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+            Main Features Of Play
+          </h2>
+          <p class="text-base text-body-color dark:text-dark-6">
+            There are many variations of passages of Lorem Ipsum available
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-4">
+      <% features.forEach(function (feature) { %>
+        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
+          <div class="mb-12 wow fadeInUp group" data-wow-delay="<%= feature.delay %>">
+            <div class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
+              <span class="absolute left-0 top-0 -z-1 mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary/20 duration-300 group-hover:rotate-45"></span>
+              <%~ include(`/partials/play/icons/${feature.icon}`, page) %>
+            </div>
+            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white"><%= feature.title %></h4>
+            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9"><%= feature.description %></p>
+            <a
+              href="#about"
+              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

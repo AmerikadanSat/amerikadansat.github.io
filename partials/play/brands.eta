@@ -1,0 +1,29 @@
+<%
+const brands = [
+  { name: "GrayGrids", icon: "graygrids" },
+  { name: "Lineicons", icon: "lineicons" },
+  { name: "UIdeck", icon: "uideck" },
+  { name: "AyroUI", icon: "ayroui" },
+  { name: "TailGrids", icon: "tailgrids" }
+];
+%>
+<section id="brands" class="pb-20 dark:bg-dark">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap items-center justify-center gap-8 -mx-4 xl:gap-11">
+      <% brands.forEach(function (brand) { %>
+        <a href="#" onclick="event.preventDefault();" aria-label="<%= brand.name %>">
+          <img
+            src="/assets/images/brands/<%= brand.icon %>.svg"
+            alt="<%= brand.name %>"
+            class="dark:hidden"
+          />
+          <img
+            src="/assets/images/brands/<%= brand.icon %>-white.svg"
+            alt=""
+            class="hidden dark:block"
+          />
+        </a>
+      <% }); %>
+    </div>
+  </div>
+</section>

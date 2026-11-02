@@ -1,9 +1,12 @@
 <%
-page={
-    "title": "E-Ticaretinizi Amerika'ya Taşıyın",
+page = {
+    "title": "Play | Free Tailwind CSS Template for Startup and SaaS",
+    "description": "Play is a free Tailwind CSS template for startups, SaaS products, apps, and more. Open-source, responsive, and built with modern tooling.",
+    "siteName": "Play",
+    "language": "en",
     "navigation": [],
     ...it
 };
 %>
 <% layout("../layouts/tr/default", page) %>
-<h1>Esenlikler Dünya</h1>
+<%~ include("/partials/play/home", page) %>
