@@ -16,8 +16,8 @@ const fieldClass = "w-full rounded-md border border-stroke bg-transparent px-5 p
         >
           <div class="mb-10 text-center">
             <a href="/" class="mx-auto inline-block max-w-[160px]" aria-label="Play home">
-              <img src="/assets/images/logo/logo.svg" alt="Play" class="w-full dark:hidden" width="132" height="46" />
-              <img src="/assets/images/logo/logo-white.svg" alt="Play" class="hidden w-full dark:block" width="132" height="46" />
+              <img src="/images/logo/amerikadan-sat-logo.svg" alt="Play" class="w-full dark:hidden" width="132" height="46" />
+              <img src="/images/logo/amerikadansat-white-logo.svg" alt="Play" class="hidden w-full dark:block" width="132" height="46" />
             </a>
           </div>
           <form action="#" method="post">

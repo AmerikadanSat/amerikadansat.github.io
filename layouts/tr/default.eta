@@ -1,5 +1,5 @@
-<% page={ "language" : "en" , ...it }; %>
-<!doctype html>
+<% const page={ "language" : "tr" , ...it }; %>
+<!DOCTYPE html>
 <html lang="<%= page.language %>" class="scroll-smooth">
 	<%~ include("./head", page) %>
 
@@ -10,8 +10,9 @@
 		</main>
 		<%~ include("./footer", page) %>
 
-		<script src="/assets/js/wow.min.js" defer></script>
-		<script src="/assets/js/swiper-bundle.min.js" defer></script>
-		<script src="/assets/js/site.js" defer></script>
+		<script src="/js/wow.min.js" defer></script>
+		<script src="/js/swiper-bundle.min.js" defer></script>
+		<script src="/js/site.js" defer></script>
 	</body>
+
 </html>

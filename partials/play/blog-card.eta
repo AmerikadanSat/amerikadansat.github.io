@@ -11,7 +11,7 @@ const delay = post.delay ?? ".1s";
   <div class="mb-8 overflow-hidden rounded-[5px]">
     <a href="<%= href %>" class="block" aria-label="<%= title %>">
       <img
-        src="/assets/images/blog/<%= image %>"
+        src="/images/blog/<%= image %>"
         alt=""
         class="w-full transition group-hover:rotate-6 group-hover:scale-125"
       />

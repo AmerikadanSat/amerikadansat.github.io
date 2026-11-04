@@ -2,7 +2,6 @@
 page = {
     "title": "Blog Details | Play",
     "description": "Read the full article on building better products and experiences with Play.",
-    "siteName": "Play",
     "language": "en",
     "banner": {
         "title": "Blog Details",

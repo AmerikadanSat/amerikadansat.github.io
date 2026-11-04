@@ -1,7 +1,7 @@
 <%
 const file = it.file ?? "";
 const isHome = file === "index.html";
-const isOverlay = it.headerOverlay === true;
+const isOverlay = it.overlay === true;
 const sectionHref = (hash) => isHome ? hash : `/${hash}`;
 
 const navItems = [
@@ -37,11 +37,11 @@ const desktopLinkColor = isOverlay
       <div class="max-w-full px-4 w-60">
         <a href="<%= isHome ? "#home" : "/" %>" class="block w-full py-5 navbar-logo" aria-label="Play home">
           <img
-            src="/assets/images/logo/<%= isOverlay ? "logo-white" : "logo" %>.svg"
+            src="/images/logo/<%= isOverlay ? "amerikadansat-logo-white" : "amerikadansat-logo" %>.svg"
             alt="Play"
             class="w-full header-logo"
-            width="132"
-            height="46"
+            width="24"
+            height="24"
           />
         </a>
       </div>

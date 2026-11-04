@@ -2,7 +2,6 @@
 page = {
     "title": "Sign Up | Play",
     "description": "Create your Play account.",
-    "siteName": "Play",
     "language": "en",
     "authMode": "signup",
     "banner": {

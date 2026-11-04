@@ -1,6 +1,6 @@
 import { Eta } from "eta";
-import { cp, readdir, rm, stat } from "node:fs/promises";
-import { join, extname, relative, sep } from "node:path";
+import { cp, readdir, stat } from "node:fs/promises";
+import { join, extname } from "node:path";
 import { Buffer } from "node:buffer";
 import { minify } from "@minify-html/node";
 
@@ -10,8 +10,21 @@ const BASE_URL = "https://AmerikadanSat.com";
 
 const ETA = new Eta({ views: join(import.meta.dirname, "./") })
 
-async function getEtaFiles(dir: string): Promise<string[]> {
-    const generatedPages: string[] = [];
+function escapeXml(value: string): string {
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
+}
+
+function encodeUrlPath(urlPath: string): string {
+    return urlPath.split("/").map(encodeURIComponent).join("/");
+}
+
+async function generateFiles(dir: string): Promise<void> {
+    const sitemap: Array<{ url: string; lastmod: string }> = [];
     async function walk(sourcePath: string): Promise<void> {
         const entries = await readdir(sourcePath, { withFileTypes: true });
         for (const entry of entries) {
@@ -32,61 +45,33 @@ async function getEtaFiles(dir: string): Promise<string[]> {
                         file: uriFile,
                     },
                 );
-                // content = minify(Buffer.from(content),
-                //     {
-                //         keep_comments: false
-                //     }).toString();
+                /*
+                content = minify(Buffer.from(content),
+                    {
+                        keep_comments: false
+                    }).toString();
+                */
                 await Bun.$`mkdir -p ${targetPath}`;
                 await Bun.write(targetPage, content);
-                generatedPages.push(targetPage);
+                const stats = await stat(srcFullPath);
+                let urlPath = uriFullPath;
+                if (uriFullPath.endsWith("/index.html")) {
+                    urlPath = uriFullPath.slice(0, -"index.html".length);
+                }
+                sitemap.push({
+                    url: BASE_URL + encodeUrlPath(urlPath),
+                    lastmod: stats.mtime.toISOString(),
+                });
                 console.log(uriFullPath);
             }
         }
     }
     await walk(dir);
-    return generatedPages;
-}
-
-function escapeXml(value: string): string {
-    return value
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&apos;");
-}
-
-function toUrlPath(filePath: string): string {
-    const relativePath = relative(OUTPUT_PATH, filePath).split(sep).join("/");
-    const urlPath = "/" + relativePath;
-
-    // Directory index pages are served from their directory URL.
-    if (urlPath.endsWith("/index.html")) {
-        return urlPath.slice(0, -"index.html".length);
-    }
-
-    return urlPath;
-}
-
-function encodeUrlPath(urlPath: string): string {
-    return urlPath.split("/").map(encodeURIComponent).join("/");
-}
-
-async function generateSitemaps(htmlFiles: string[]): Promise<void> {
-    const pages = await Promise.all(
-        [...htmlFiles].sort().map(async (filePath) => {
-            const stats = await stat(filePath);
-            return {
-                url: BASE_URL + encodeUrlPath(toUrlPath(filePath)),
-                lastmod: stats.mtime.toISOString(),
-            };
-        }),
-    );
 
     const xmlSitemap = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-        ...pages.flatMap(({ url, lastmod }) => [
+        ...sitemap.flatMap(({ url, lastmod }) => [
             "  <url>",
             `    <loc>${escapeXml(url)}</loc>`,
             `    <lastmod>${lastmod}</lastmod>`,
@@ -99,23 +84,18 @@ async function generateSitemaps(htmlFiles: string[]): Promise<void> {
     await Bun.write(join(OUTPUT_PATH, "sitemap.xml"), xmlSitemap);
     console.log("/sitemap.xml");
 
-    const txtSitemap = pages.length > 0
-        ? pages.map(({ url }) => url).join("\n") + "\n"
+    const txtSitemap = sitemap.length > 0
+        ? sitemap.map(({ url }) => url).join("\n") + "\n"
         : "";
 
     await Bun.write(join(OUTPUT_PATH, "sitemap.txt"), txtSitemap);
     console.log("/sitemap.txt");
 }
 
-async function copyAssets(): Promise<void> {
-    const targetPath = join(OUTPUT_PATH, "assets");
-    await rm(targetPath, { recursive: true, force: true });
-    await cp("assets", targetPath, { recursive: true });
-    console.log("/assets");
-}
+await Bun.$`rm -rf ${OUTPUT_PATH}`;
 
 await Bun.$`mkdir -p ${OUTPUT_PATH}`;
 
-const generatedPages = await getEtaFiles(PAGES_PATH);
-await copyAssets();
-await generateSitemaps(generatedPages);
+await generateFiles(PAGES_PATH);
+
+await cp("assets", OUTPUT_PATH, { recursive: true });

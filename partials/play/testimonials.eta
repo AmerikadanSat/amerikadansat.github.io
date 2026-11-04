@@ -45,7 +45,7 @@ const testimonialSlides = [...testimonials, ...testimonials];
               <div class="rounded-xl bg-white px-4 py-[30px] shadow-testimonial dark:bg-dark sm:px-[30px]">
                 <div class="mb-[18px] flex items-center gap-[2px]">
                   <% for (let star = 0; star < 5; star++) { %>
-                    <img src="/assets/images/testimonials/icon-star.svg" alt="" aria-hidden="true" />
+                    <img src="/images/testimonials/icon-star.svg" alt="" aria-hidden="true" />
                   <% } %>
                 </div>
 
@@ -54,7 +54,7 @@ const testimonialSlides = [...testimonials, ...testimonials];
                 <a href="#contact" class="flex items-center gap-4">
                   <div class="h-[50px] w-[50px] overflow-hidden rounded-full">
                     <img
-                      src="/assets/images/testimonials/<%= testimonial.image %>"
+                      src="/images/testimonials/<%= testimonial.image %>"
                       alt="<%= testimonial.name %>"
                       class="h-[50px] w-[50px] overflow-hidden rounded-full"
                       width="50"

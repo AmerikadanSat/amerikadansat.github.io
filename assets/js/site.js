@@ -9,7 +9,7 @@
     if (!header) return;
 
     const isSticky = window.scrollY > header.offsetTop;
-    const isOverlay = header.dataset.headerOverlay === "true";
+    const isOverlay = header.dataset.overlay === "true";
     const isDark = root.classList.contains("dark");
     header.classList.toggle("sticky", isSticky);
 
@@ -17,8 +17,8 @@
     if (logo) {
       const useLightLogo = isSticky ? isDark : isOverlay || isDark;
       logo.src = useLightLogo
-        ? "/assets/images/logo/logo-white.svg"
-        : "/assets/images/logo/logo.svg";
+        ? "/images/logo/amerikadansat-white-logo.svg"
+        : "/images/logo/amerikadansat-logo.svg";
     }
 
     const backToTop = document.querySelector(".back-to-top");

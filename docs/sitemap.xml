@@ -1,47 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AmerikadanSat.com/404.html</loc>
-    <lastmod>2026-11-02T20:01:19.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/about.html</loc>
-    <lastmod>2026-11-02T20:01:19.655Z</lastmod>
-  </url>
-  <url>
     <loc>https://AmerikadanSat.com/blog-details.html</loc>
-    <lastmod>2026-11-02T20:01:19.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/blog-grids.html</loc>
-    <lastmod>2026-11-02T20:01:19.652Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/contact.html</loc>
-    <lastmod>2026-11-02T20:01:19.664Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/en/</loc>
-    <lastmod>2026-11-02T20:01:19.667Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/</loc>
-    <lastmod>2026-11-02T20:01:19.662Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/pricing.html</loc>
-    <lastmod>2026-11-02T20:01:19.657Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AmerikadanSat.com/signin.html</loc>
-    <lastmod>2026-11-02T20:01:19.653Z</lastmod>
+    <lastmod>2026-11-03T19:30:30.714Z</lastmod>
   </url>
   <url>
     <loc>https://AmerikadanSat.com/signup.html</loc>
-    <lastmod>2026-11-02T20:01:19.651Z</lastmod>
+    <lastmod>2026-11-03T19:30:30.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/blog-grids.html</loc>
+    <lastmod>2026-11-03T19:30:30.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/signin.html</loc>
+    <lastmod>2026-11-03T19:30:30.714Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/about.html</loc>
+    <lastmod>2026-11-03T19:30:30.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/pricing.html</loc>
+    <lastmod>2026-11-03T19:30:30.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/</loc>
+    <lastmod>2026-11-04T01:07:58.450Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/404.html</loc>
+    <lastmod>2026-11-03T19:30:30.713Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/contact.html</loc>
+    <lastmod>2026-11-03T19:30:30.711Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/en/</loc>
+    <lastmod>2026-11-04T00:44:26.005Z</lastmod>
   </url>
   <url>
     <loc>https://AmerikadanSat.com/tr/</loc>
-    <lastmod>2026-11-02T20:01:19.669Z</lastmod>
+    <lastmod>2026-11-04T00:44:26.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/tr/hakkimizda/</loc>
+    <lastmod>2026-11-04T07:36:22.368Z</lastmod>
   </url>
 </urlset>

@@ -13,7 +13,6 @@ const posts = [
 page = {
     "title": "Blog Grids | Play",
     "description": "Read the latest news, guides, and insights from the Play team.",
-    "siteName": "Play",
     "language": "en",
     "banner": {
         "title": "Blog Grid",
