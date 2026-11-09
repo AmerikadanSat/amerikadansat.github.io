@@ -24,7 +24,7 @@ const whatsappHref = "https://wa.me/12017579253?text=Merhaba%2C%20yasal%20bilgil
           href="<%= whatsappHref %>"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-6 py-3 text-base font-medium text-black transition duration-300 ease-in-out hover:bg-whatsapp-dark"
+          class="whatsapp-cta inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-6 py-3 text-base font-medium text-black transition duration-300 ease-in-out hover:bg-whatsapp-dark"
         >
           <img
             src="/images/whatsapp-icon.svg"
