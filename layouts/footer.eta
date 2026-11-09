@@ -14,17 +14,16 @@ const legalLinks = [
   { label: "Yasal Bildirim", href: "/yasal-bildirim/" },
   { label: "Kullanım Şartları", href: "/kullanim-sartlari/" }
 ];
-const footerSocials = [
-  { label: "X", href: "https://x.com/AmerikadanSat", icon: "footer-x" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/AmerikadanSat", icon: "footer-linkedin" },
-  { label: "Facebook", href: "https://www.facebook.com/AmerikadanSat/", icon: "footer-facebook" },
+const contactLinks = [
+  { label: "WhatsApp", href: "https://wa.me/12017579253?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz.", icon: "footer-whatsapp" },
+  { label: "X.com", href: "https://x.com/AmerikadanSat", icon: "footer-x" },
   { label: "Instagram", href: "https://www.instagram.com/AmerikadanSat/", icon: "footer-instagram" }
 ];
 %>
 <footer class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap -mx-4">
-      <div class="w-full px-4 sm:w-1/2 lg:w-5/12 xl:w-4/12">
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
         <div class="w-full mb-10">
           <a href="/" class="mb-6 inline-block max-w-[160px]" aria-label="Amerika'dan Sat Anasayfa">
             <img src="/images/logo/amerikadansat-white-text-logo.svg" alt="Amerika'dan Sat" class="max-w-full" width="132" height="46" />
@@ -33,19 +32,6 @@ const footerSocials = [
             Türkiye'deki işletmelerin ABD pazarına açılması için ihtiyaç
             duyduğu hizmetleri ve çözüm ortaklarını tek noktada sunuyoruz.
           </p>
-          <div class="flex items-center -mx-3">
-            <% footerSocials.forEach(function (social) { %>
-              <a
-                href="<%= social.href %>"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="px-3 text-gray-7 hover:text-white"
-                aria-label="Amerika'dan Sat <%= social.label %>"
-              >
-                <%~ include(`/partials/icons/${social.icon}`, page) %>
-              </a>
-            <% }); %>
-          </div>
         </div>
       </div>
       <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
@@ -60,13 +46,36 @@ const footerSocials = [
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-5/12">
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
         <div class="w-full mb-10">
           <h4 class="text-lg font-semibold text-white mb-9">Kütüphane</h4>
           <ul>
             <% libraryLinks.forEach(function (link) { %>
               <li>
                 <a href="<%= link.href %>" class="inline-block mb-3 text-base text-gray-7 hover:text-primary"><%= link.label %></a>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full mb-10">
+          <h4 class="text-lg font-semibold text-white mb-9">İletişim</h4>
+          <ul>
+            <% contactLinks.forEach(function (link) { %>
+              <li>
+                <a
+                  href="<%= link.href %>"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mb-3 inline-flex items-center gap-2 text-base text-gray-7 hover:text-white"
+                  aria-label="Amerika'dan Sat <%= link.label %>"
+                >
+                  <span class="flex h-[22px] w-[22px] shrink-0 items-center justify-center">
+                    <%~ include(`/partials/icons/${link.icon}`, page) %>
+                  </span>
+                  <%= link.label %>
+                </a>
               </li>
             <% }); %>
           </ul>
