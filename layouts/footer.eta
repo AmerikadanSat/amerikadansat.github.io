@@ -1,5 +1,6 @@
 <%
 const corporateLinks = [
+  { label: "Anasayfa", href: "/" },
   { label: "Hakkımızda", href: "/hakkimizda/" },
   { label: "Hizmetlerimiz", href: "/hizmetlerimiz/" },
   { label: "Nasıl Çalışıyoruz?", href: "/nasil-calisiyoruz/" }
@@ -7,6 +8,7 @@ const corporateLinks = [
 const libraryLinks = [
   { label: "Sıkça Sorulan Sorular", href: "/sikca-sorulan-sorular/" },
   { label: "Terimler Sözlüğü", href: "/terimler-sozlugu/" },
+  { label: "ABD ithalat Klavuzu", href: "/abd-ithalat-klavuzu/" },
   { label: "ABD ithalat tarifeleri", href: "/abd-ithalat-tarifeleri/" }
 ];
 const legalLinks = [
@@ -15,6 +17,7 @@ const legalLinks = [
   { label: "Kullanım Şartları", href: "/kullanim-sartlari/" }
 ];
 const contactLinks = [
+  { label: "Email", href: "mailto:bilgi@amerikadansat.com?subject=G%C3%B6r%C3%BC%C5%9Fme%20Talebi&body=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz.", icon: "footer-email" },
   { label: "WhatsApp", href: "https://wa.me/12017579253?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz.", icon: "footer-whatsapp" },
   { label: "X.com", href: "https://x.com/AmerikadanSat", icon: "footer-x" },
   { label: "Instagram", href: "https://www.instagram.com/AmerikadanSat/", icon: "footer-instagram" }
