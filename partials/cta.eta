@@ -1,0 +1,44 @@
+<section class="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
+  <div class="container px-4 mx-auto">
+    <div class="relative overflow-hidden">
+      <div class="flex flex-wrap items-stretch -mx-4">
+        <div class="w-full px-4">
+          <div class="mx-auto max-w-[760px] text-center">
+            <h2 class="mb-4 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
+              ABD Pazarına Açılmak İçin İlk Adımı Şimdi Atın.
+            </h2>
+            <p class="mx-auto mb-8 max-w-[640px] text-base leading-[1.5] text-white">
+              İşletmenizin ihtiyaçlarını birlikte değerlendirelim, size uygun
+              çözümleri belirleyelim. Ücretsiz ön görüşme talep edin, hemen
+              WhatsApp'tan yazın.
+            </p>
+            <a
+              href="https://wa.me/12017579253?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-7 py-3 text-base font-medium text-black transition duration-300 ease-in-out hover:bg-whatsapp-dark"
+            >
+              <img
+                src="/images/whatsapp-icon.svg"
+                alt=""
+                class="h-5 w-5"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              />
+              WhatsApp'tan Hemen Konuşalım
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span class="absolute top-0 left-0">
+      <%~ include("/partials/icons/cta-shape-1", page) %>
+    </span>
+    <span class="absolute bottom-0 right-0">
+      <%~ include("/partials/icons/cta-shape-2", page) %>
+    </span>
+  </div>
+</section>

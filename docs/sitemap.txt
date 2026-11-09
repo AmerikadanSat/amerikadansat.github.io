@@ -7,6 +7,4 @@ https://AmerikadanSat.com/pricing.html
 https://AmerikadanSat.com/
 https://AmerikadanSat.com/404.html
 https://AmerikadanSat.com/contact.html
-https://AmerikadanSat.com/en/
-https://AmerikadanSat.com/tr/
-https://AmerikadanSat.com/tr/hakkimizda/
+https://AmerikadanSat.com/hakkimizda/

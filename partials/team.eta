@@ -1,0 +1,70 @@
+<%
+const team = [
+  { name: "Melissa Tatcher", role: "Marketing Expert", image: "team-01.png" },
+  { name: "Stuard Ferrel", role: "Digital Marketer", image: "team-02.png" },
+  { name: "Eva Hudson", role: "Creative Designer", image: "team-03.png" },
+  { name: "Jackie Sanders", role: "SEO Expert", image: "team-04.png" }
+];
+const socialLinks = [
+  { label: "Facebook", icon: "team-facebook" },
+  { label: "Twitter", icon: "team-twitter" },
+  { label: "Instagram", icon: "team-instagram" }
+];
+const members = typeof it.teamLimit === "number" ? team.slice(0, it.teamLimit) : team;
+%>
+<section id="team" class="overflow-hidden bg-gray-1 pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full px-4">
+        <div class="mx-auto mb-[60px] max-w-[485px] text-center">
+          <span class="block mb-2 text-lg font-semibold text-primary">Our Team Members</span>
+          <h2 class="mb-3 text-3xl font-bold leading-[1.2] text-dark sm:text-4xl md:text-[40px]">
+            Our Creative Team
+          </h2>
+          <p class="text-base text-body-color">
+            There are many variations of passages of Lorem Ipsum available
+            but the majority have suffered alteration in some form.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-center -mx-4">
+      <% members.forEach(function (member) { %>
+        <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
+          <div class="px-5 pt-12 pb-10 mb-8 bg-white group rounded-xl shadow-testimonial">
+            <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
+              <img
+                src="/images/team/<%= member.image %>"
+                alt="<%= member.name %>"
+                class="h-[120px] w-[120px] rounded-full"
+                width="120"
+                height="120"
+                loading="lazy"
+              />
+              <span class="absolute bottom-0 left-0 w-10 h-10 transition-all rounded-full opacity-0 -z-10 bg-secondary group-hover:opacity-100"></span>
+              <span class="absolute top-0 right-0 transition-all opacity-0 -z-10 group-hover:opacity-100">
+                <%~ include("/partials/icons/team-pattern", page) %>
+              </span>
+            </div>
+            <div class="text-center">
+              <h4 class="mb-1 text-lg font-semibold text-dark"><%= member.name %></h4>
+              <p class="mb-5 text-sm text-body-color"><%= member.role %></p>
+              <div class="flex items-center justify-center gap-5">
+                <% socialLinks.forEach(function (social) { %>
+                  <a
+                    href="#"
+                    onclick="event.preventDefault();"
+                    class="text-dark-6 hover:text-primary"
+                    aria-label="<%= member.name %> on <%= social.label %>"
+                  >
+                    <%~ include(`/partials/icons/${social.icon}`, page) %>
+                  </a>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</section>

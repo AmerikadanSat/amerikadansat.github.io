@@ -1,0 +1,129 @@
+<%
+const file = it.file ?? "";
+const isHome = file == "index.html";
+const isOverlay = it.overlay == true;
+const sectionHref = (hash) => isHome ? hash : `/${hash}`;
+
+const navbarMenuItems = [
+  { label: "Hakkımızda",  href: "/hakkimizda/" },
+  { label: "Hizmetlerimiz", href: "/hizmetlerimiz/" },
+  { label: "Nasıl Çalışıyoruz?", href: "/nasil-calisiyoruz/" },
+  //{ label: "Kütüphane", href: "/kutuphane/" },
+];
+
+const libraryMenuItems = [
+  { label: "Sıkça Sorulan Sorular", href: "/sikca-sorulan-sorular/" },
+  { label: "Terimler Sözlüğü", href: "/terimler-sozlugu/" },
+  { label: "ABD ithalat tarifeleri", href: "/abd-ithalat-tarifeleri/" },
+];
+
+const desktopLinkColor = isOverlay
+  ? "lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+  : "lg:text-body-color";
+%>
+<header class="absolute top-0 left-0 z-40 flex items-center w-full bg-transparent ud-header" data-overlay="<%= isOverlay %>">
+  <div class="container px-4 mx-auto">
+    <div class="relative flex items-center justify-between -mx-4">
+      <div class="max-w-full w-80">
+        <a href="<%= isHome ? "#home" : "/" %>" class="block w-full py-5 navbar-logo" aria-label="Amerika'dan Sat Anasayfa">
+          <img
+            src="/images/logo/<%= isOverlay ? "amerikadansat-white-text-logo" : "amerikadansat-black-text-logo" %>.svg"
+            alt="Amerika'dan Sat"
+            class="w-full header-logo"
+            width="24"
+            height="24"
+          />
+        </a>
+      </div>
+      <div class="flex items-center justify-between w-full px-4">
+        <div>
+          <button
+            id="navbarToggler"
+            type="button"
+            class="absolute right-4 top-1/2 block -translate-y-1/2 rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden"
+            aria-label="Menüyü Aç/Kapat"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+          >
+            <span class="relative my-[6px] block h-[2px] w-[30px] <%= isOverlay ? "bg-white" : "bg-dark" %>"></span>
+            <span class="relative my-[6px] block h-[2px] w-[30px] <%= isOverlay ? "bg-white" : "bg-dark" %>"></span>
+            <span class="relative my-[6px] block h-[2px] w-[30px] <%= isOverlay ? "bg-white" : "bg-dark" %>"></span>
+          </button>
+          <nav
+            id="navbarCollapse"
+            class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none xl:px-6"
+            aria-label="Ana Menü"
+          >
+            <ul class="block lg:flex 2xl:ml-20">
+              <% navbarMenuItems.forEach(function (item, index) { %>
+                <li class="relative group">
+                  <a
+                    href="<%= item.href %>"
+                    class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 <%= desktopLinkColor %><%= index === 0 ? "" : " lg:ml-7 xl:ml-10 whitespace-nowrap" %>"
+                  >
+                    <%= item.label %>
+                  </a>
+                </li>
+              <% }); %>
+                            <li class="relative submenu-item group">
+                <a
+                  href="#"
+                  class="relative flex items-center justify-between py-2 mx-8 text-base font-medium group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 lg:pr-4 xl:ml-10 <%= isOverlay
+                    ? "text-dark dark:text-white lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70"
+                    : "text-primary" %>"
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                >
+                  Kütüphane
+                  <svg
+                    class="ml-2 fill-current"
+                    width="16"
+                    height="20"
+                    viewBox="0 0 16 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                  </svg>
+                </a>
+                <div class="submenu relative left-0 top-full hidden w-[250px] rounded-xs bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                  <% libraryMenuItems.forEach(function (item) { %>
+                    <a
+                      href="<%= item.href %>"
+                      class="block rounded-sm px-4 py-[10px] text-sm hover:text-primary dark:hover:text-primary <%= item.file === file ? "text-primary dark:text-primary" : "text-body-color dark:text-dark-6" %>"
+                      <% if (item.file === file) { %>aria-current="page"<% } %>
+                    >
+                      <%= item.label %>
+                    </a>
+                  <% }); %>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex items-center justify-end pr-16 lg:pr-0">
+          <div class="hidden sm:flex">
+            <a
+              href="https://wa.me/12017579253?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 px-6 py-2 text-base font-medium text-black duration-300 ease-in-out rounded-md bg-whatsapp hover:bg-whatsapp-dark whitespace-nowrap"
+              aria-label="WhatsApp üzerinden hemen konuşalım"
+            >
+              <img
+                src="/images/whatsapp-icon.svg"
+                alt=""
+                class="h-5 w-5"
+                width="20"
+                height="20"
+                aria-hidden="true"
+              />
+              Hemen Konuşalım
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

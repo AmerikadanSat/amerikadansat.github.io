@@ -1,7 +1,7 @@
 <%
 page = {
-    "title": "About | Play",
-    "description": "Learn more about Play, the free Tailwind CSS template for startups, SaaS products, and apps.",
+    "title": "About",
+    "description": "Learn more about Amerika'dan Sat, the free Tailwind CSS template for startups, SaaS products, and apps.",
     "language": "en",
     "banner": {
         "title": "About Us Page",
@@ -11,8 +11,8 @@ page = {
     ...it
 };
 %>
-<% layout("../layouts/tr/default", page) %>
-<%~ include("/partials/play/banner", page) %>
-<%~ include("/partials/play/about", page) %>
-<%~ include("/partials/play/cta", page) %>
-<%~ include("/partials/play/team", page) %>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/about", page) %>
+<%~ include("/partials/cta", page) %>
+<%~ include("/partials/team", page) %>

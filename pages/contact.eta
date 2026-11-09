@@ -1,7 +1,7 @@
 <%
 page = {
-    "title": "Contact | Play",
-    "description": "Get in touch with the Play team about your next startup, SaaS, or app project.",
+    "title": "Contact",
+    "description": "Get in touch with the Amerika'dan Sat team about your next startup, SaaS, or app project.",
     "language": "en",
     "banner": {
         "title": "Contact Page",
@@ -10,6 +10,6 @@ page = {
     ...it
 };
 %>
-<% layout("../layouts/tr/default", page) %>
-<%~ include("/partials/play/banner", page) %>
-<%~ include("/partials/play/contact", page) %>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/contact", page) %>

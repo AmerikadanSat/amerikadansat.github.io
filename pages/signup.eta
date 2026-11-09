@@ -1,7 +1,7 @@
 <%
 page = {
-    "title": "Sign Up | Play",
-    "description": "Create your Play account.",
+    "title": "Sign Up",
+    "description": "Create your Amerika'dan Sat account.",
     "language": "en",
     "authMode": "signup",
     "banner": {
@@ -11,6 +11,6 @@ page = {
     ...it
 };
 %>
-<% layout("../layouts/tr/default", page) %>
-<%~ include("/partials/play/banner", page) %>
-<%~ include("/partials/play/auth", page) %>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/auth", page) %>

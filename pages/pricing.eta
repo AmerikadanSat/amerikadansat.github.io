@@ -1,7 +1,7 @@
 <%
 page = {
-    "title": "Pricing | Play",
-    "description": "Compare Play's pricing plans for startups, SaaS products, and apps.",
+    "title": "Pricing",
+    "description": "Compare Amerika'dan Sat's pricing plans for startups, SaaS products, and apps.",
     "language": "en",
     "banner": {
         "title": "Pricing Page",
@@ -10,6 +10,6 @@ page = {
     ...it
 };
 %>
-<% layout("../layouts/tr/default", page) %>
-<%~ include("/partials/play/banner", page) %>
-<%~ include("/partials/play/pricing", page) %>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/pricing", page) %>

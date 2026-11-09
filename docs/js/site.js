@@ -1,24 +1,24 @@
 (function () {
   "use strict";
 
-  const root = document.documentElement;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function updateHeader() {
     const header = document.querySelector(".ud-header");
-    if (!header) return;
+    if (!header) {
+      return;
+    }
 
     const isSticky = window.scrollY > header.offsetTop;
-    const isOverlay = header.dataset.overlay === "true";
-    const isDark = root.classList.contains("dark");
+    const isOverlay = header.dataset.overlay == "true";
     header.classList.toggle("sticky", isSticky);
 
     const logo = document.querySelector(".header-logo");
     if (logo) {
-      const useLightLogo = isSticky ? isDark : isOverlay || isDark;
+      const useLightLogo = isOverlay && !isSticky;
       logo.src = useLightLogo
-        ? "/images/logo/amerikadansat-white-logo.svg"
-        : "/images/logo/amerikadansat-logo.svg";
+        ? "/images/logo/amerikadansat-white-text-logo.svg"
+        : "/images/logo/amerikadansat-black-text-logo.svg";
     }
 
     const backToTop = document.querySelector(".back-to-top");
@@ -118,23 +118,6 @@
     });
   }
 
-  function initThemeSwitcher() {
-    const switcher = document.getElementById("themeSwitcher");
-    if (!switcher) return;
-
-    switcher.checked = root.classList.contains("dark");
-
-    switcher.addEventListener("change", function () {
-      root.classList.toggle("dark", switcher.checked);
-      try {
-        localStorage.setItem("theme", switcher.checked ? "dark" : "light");
-      } catch (error) {
-        // localStorage may be unavailable in private browsing contexts.
-      }
-      updateHeader();
-    });
-  }
-
   function initCarousel() {
     if (typeof window.Swiper === "undefined") return;
     if (!document.querySelector(".testimonial-carousel")) return;
@@ -172,7 +155,6 @@
     initNavigation();
     initScrollSpy();
     initBackToTop();
-    initThemeSwitcher();
     initCarousel();
     initAnimations();
     updateHeader();

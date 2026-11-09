@@ -1,7 +1,7 @@
 <%
 page = {
-    "title": "Blog Details | Play",
-    "description": "Read the full article on building better products and experiences with Play.",
+    "title": "Blog Details",
+    "description": "Read the full article on building better products and experiences with Amerika'dan Sat.",
     "language": "en",
     "banner": {
         "title": "Blog Details",
@@ -10,6 +10,6 @@ page = {
     ...it
 };
 %>
-<% layout("../layouts/tr/default", page) %>
-<%~ include("/partials/play/banner", page) %>
-<%~ include("/partials/play/blog-details", page) %>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/blog-details", page) %>
