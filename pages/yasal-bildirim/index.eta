@@ -1,0 +1,19 @@
+<%
+page = {
+    "title": "Yasal Bildirim | Amerika'dan Sat",
+    "description": "Amerika'dan Sat yasal bildirim sayfası. Şirket bilgileri, sorumluluk sınırlamaları ve yasal uyarılar.",
+    "language": "tr",
+    "banner": {
+        "title": "Yasal Bildirim",
+        "description": "Yasal bildirim ve şirket bilgilerimize ilişkin güncel metin yakında yayınlanacaktır.",
+        "breadcrumb": "Yasal Bildirim",
+        "homeLabel": "Anasayfa"
+    },
+    "legalIntro": "Yasal bildirim metnimiz hazırlanmaktadır.",
+    "legalDetails": "Şirket bilgileri, sorumluluk sınırlamaları ve yasal uyarılara ilişkin ayrıntılar yakında bu sayfada yayınlanacaktır.",
+    ...it
+};
+%>
+<% layout("../../layouts/default", page) %>
+<%~ include("../../partials/banner", page) %>
+<%~ include("../../partials/legal", page) %>

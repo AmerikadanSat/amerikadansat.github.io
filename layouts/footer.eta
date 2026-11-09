@@ -1,57 +1,46 @@
 <%
-const aboutLinks = [
-  { label: "Home", href: "/#home" },
-  { label: "Features", href: "/#features" },
-  { label: "About", href: "/#about" },
-  { label: "Testimonial", href: "/#testimonials" }
+const corporateLinks = [
+  { label: "Hakkımızda", href: "/hakkimizda/" },
+  { label: "Hizmetlerimiz", href: "/hizmetlerimiz/" },
+  { label: "Nasıl Çalışıyoruz?", href: "/nasil-calisiyoruz/" }
 ];
-const featureLinks = [
-  { label: "How it works", href: "/#features" },
-  { label: "Privacy policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Refund policy", href: "#" }
-];
-const productLinks = [
-  { label: "LineIcons", href: "https://lineicons.com/" },
-  { label: "Ecommerce HTML", href: "https://ecommercehtml.com/" },
-  { label: "TailAdmin", href: "https://tailadmin.com/" },
-  { label: "PlainAdmin", href: "https://plainadmin.com/" }
+const libraryLinks = [
+  { label: "Sıkça Sorulan Sorular", href: "/sikca-sorulan-sorular/" },
+  { label: "Terimler Sözlüğü", href: "/terimler-sozlugu/" },
+  { label: "ABD ithalat tarifeleri", href: "/abd-ithalat-tarifeleri/" }
 ];
 const legalLinks = [
-  { label: "Privacy policy", href: "#" },
-  { label: "Legal notice", href: "#" },
-  { label: "Terms of service", href: "#" }
+  { label: "Gizlilik Politikası", href: "/gizlilik-politikasi/" },
+  { label: "Yasal Bildirim", href: "/yasal-bildirim/" },
+  { label: "Kullanım Şartları", href: "/kullanim-sartlari/" }
 ];
 const footerSocials = [
-  { label: "Facebook", icon: "footer-facebook" },
-  { label: "Twitter", icon: "footer-twitter" },
-  { label: "Instagram", icon: "footer-instagram" },
-  { label: "LinkedIn", icon: "footer-linkedin" }
-];
-const latestPosts = [
-  { image: "blog-footer-01.jpg", title: "I think really important to design with..." },
-  { image: "blog-footer-02.jpg", title: "Recognizing the need is the primary..." }
+  { label: "X", href: "https://x.com/AmerikadanSat", icon: "footer-x" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/AmerikadanSat", icon: "footer-linkedin" },
+  { label: "Facebook", href: "https://www.facebook.com/AmerikadanSat/", icon: "footer-facebook" },
+  { label: "Instagram", href: "https://www.instagram.com/AmerikadanSat/", icon: "footer-instagram" }
 ];
 %>
 <footer class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
   <div class="container px-4 mx-auto">
     <div class="flex flex-wrap -mx-4">
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-3/12">
+      <div class="w-full px-4 sm:w-1/2 lg:w-5/12 xl:w-4/12">
         <div class="w-full mb-10">
           <a href="/" class="mb-6 inline-block max-w-[160px]" aria-label="Amerika'dan Sat Anasayfa">
             <img src="/images/logo/amerikadansat-white-text-logo.svg" alt="Amerika'dan Sat" class="max-w-full" width="132" height="46" />
           </a>
-          <p class="mb-8 max-w-[270px] text-base text-gray-7">
-            We create digital experiences for brands and companies by using
-            technology.
+          <p class="mb-8 max-w-[300px] text-base text-gray-7">
+            Türkiye'deki işletmelerin ABD pazarına açılması için ihtiyaç
+            duyduğu hizmetleri ve çözüm ortaklarını tek noktada sunuyoruz.
           </p>
           <div class="flex items-center -mx-3">
             <% footerSocials.forEach(function (social) { %>
               <a
-                href="#"
-                onclick="event.preventDefault();"
+                href="<%= social.href %>"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="px-3 text-gray-7 hover:text-white"
-                aria-label="<%= social.label %>"
+                aria-label="Amerika'dan Sat <%= social.label %>"
               >
                 <%~ include(`/partials/icons/${social.icon}`, page) %>
               </a>
@@ -59,11 +48,11 @@ const latestPosts = [
           </div>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
         <div class="w-full mb-10">
-          <h4 class="text-lg font-semibold text-white mb-9">About Us</h4>
+          <h4 class="text-lg font-semibold text-white mb-9">Kurumsal</h4>
           <ul>
-            <% aboutLinks.forEach(function (link) { %>
+            <% corporateLinks.forEach(function (link) { %>
               <li>
                 <a href="<%= link.href %>" class="inline-block mb-3 text-base text-gray-7 hover:text-primary"><%= link.label %></a>
               </li>
@@ -71,52 +60,16 @@ const latestPosts = [
           </ul>
         </div>
       </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
+      <div class="w-full px-4 sm:w-1/2 lg:w-4/12 xl:w-5/12">
         <div class="w-full mb-10">
-          <h4 class="text-lg font-semibold text-white mb-9">Features</h4>
+          <h4 class="text-lg font-semibold text-white mb-9">Kütüphane</h4>
           <ul>
-            <% featureLinks.forEach(function (link) { %>
+            <% libraryLinks.forEach(function (link) { %>
               <li>
-                <a
-                  href="<%= link.href %>"
-                  <% if (link.href === "#") { %>onclick="event.preventDefault();"<% } %>
-                  class="inline-block mb-3 text-base text-gray-7 hover:text-primary"
-                ><%= link.label %></a>
+                <a href="<%= link.href %>" class="inline-block mb-3 text-base text-gray-7 hover:text-primary"><%= link.label %></a>
               </li>
             <% }); %>
           </ul>
-        </div>
-      </div>
-      <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
-        <div class="w-full mb-10">
-          <h4 class="text-lg font-semibold text-white mb-9">Our Products</h4>
-          <ul>
-            <% productLinks.forEach(function (link) { %>
-              <li>
-                <a
-                  href="<%= link.href %>"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-block mb-3 text-base text-gray-7 hover:text-primary"
-                ><%= link.label %></a>
-              </li>
-            <% }); %>
-          </ul>
-        </div>
-      </div>
-      <div class="w-full px-4 md:w-2/3 lg:w-6/12 xl:w-3/12">
-        <div class="w-full mb-10">
-          <h4 class="text-lg font-semibold text-white mb-9">Latest blog</h4>
-          <div class="flex flex-col gap-8">
-            <% latestPosts.forEach(function (post) { %>
-              <a href="/blog-details.html" class="group flex items-center gap-[22px]">
-                <div class="overflow-hidden rounded-sm">
-                  <img src="/images/blog/<%= post.image %>" alt="" />
-                </div>
-                <span class="max-w-[180px] text-base text-gray-7 group-hover:text-white"><%= post.title %></span>
-              </a>
-            <% }); %>
-          </div>
         </div>
       </div>
     </div>
@@ -127,11 +80,10 @@ const latestPosts = [
       <div class="flex flex-wrap -mx-4">
         <div class="w-full px-4 md:w-2/3 lg:w-1/2">
           <div class="my-1">
-            <div class="flex items-center justify-center -mx-3 md:justify-start">
+            <div class="flex flex-wrap items-center justify-center -mx-3 md:justify-start">
               <% legalLinks.forEach(function (link) { %>
                 <a
                   href="<%= link.href %>"
-                  onclick="event.preventDefault();"
                   class="px-3 text-base text-gray-7 hover:text-white hover:underline"
                 ><%= link.label %></a>
               <% }); %>
@@ -141,7 +93,7 @@ const latestPosts = [
         <div class="w-full px-4 md:w-1/3 lg:w-1/2">
           <div class="flex justify-center my-1 md:justify-end">
             <p class="text-base text-center text-gray-7 md:text-left">
-              &copy; 2021-2026 
+              &copy; 2021-2026
               <a
                 href="https://AmerikadanSat.com"
                 rel="nofollow noopener"
@@ -170,7 +122,7 @@ const latestPosts = [
 <a
   href="#home"
   class="fixed left-auto items-center justify-center hidden w-10 h-10 text-white transition duration-300 ease-in-out rounded-md shadow-md back-to-top bottom-8 right-8 z-999 bg-primary hover:bg-dark"
-  aria-label="Back to top"
+  aria-label="Başa dön"
 >
   <span class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
 </a>

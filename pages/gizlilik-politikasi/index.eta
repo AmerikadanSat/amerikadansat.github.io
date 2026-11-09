@@ -1,0 +1,19 @@
+<%
+page = {
+    "title": "Gizlilik Politikası | Amerika'dan Sat",
+    "description": "Amerika'dan Sat gizlilik politikası. Kişisel verilerin toplanması, kullanılması ve korunmasına ilişkin bilgilendirme.",
+    "language": "tr",
+    "banner": {
+        "title": "Gizlilik Politikası",
+        "description": "Kişisel verilerinizin güvenliği bizim için önemlidir. Güncel gizlilik politikamız yakında yayınlanacaktır.",
+        "breadcrumb": "Gizlilik Politikası",
+        "homeLabel": "Anasayfa"
+    },
+    "legalIntro": "Gizlilik politikamızın güncel metni hazırlanmaktadır.",
+    "legalDetails": "Bu sayfada kişisel verilerinizin nasıl toplandığı, kullanıldığı, saklandığı ve korunduğuna ilişkin ayrıntılar yakında yer alacaktır.",
+    ...it
+};
+%>
+<% layout("../../layouts/default", page) %>
+<%~ include("../../partials/banner", page) %>
+<%~ include("../../partials/legal", page) %>

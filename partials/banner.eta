@@ -4,6 +4,7 @@ const title = banner.title ?? it.title ?? "Page";
 const description = banner.description ?? "There are many variations of passages of Lorem Ipsum available.";
 const breadcrumb = banner.breadcrumb ?? title;
 const homeHref = banner.homeHref ?? "/";
+const homeLabel = banner.homeLabel ?? "Anasayfa";
 %>
 <div class="relative z-10 overflow-hidden pb-[60px] pt-[120px] md:pt-[130px] lg:pt-[160px]">
   <div class="absolute bottom-0 left-0 h-px w-full bg-linear-to-r from-stroke/0 via-stroke to-stroke/0"></div>
@@ -19,7 +20,7 @@ const homeHref = banner.homeHref ?? "/";
           <ul class="flex items-center justify-center gap-[10px]">
             <li>
               <a href="<%= homeHref %>" class="flex items-center gap-[10px] text-base font-medium text-dark">
-                Home
+                <%= homeLabel %>
               </a>
             </li>
             <li>
