@@ -47,6 +47,7 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before,
@@ -77,31 +78,31 @@
   width: 100%;
 }
 
-@media (width >= 540px) {
+@media (width >=540px) {
   .container {
     max-width: 540px;
   }
 }
 
-@media (width >= 720px) {
+@media (width >=720px) {
   .container {
     max-width: 720px;
   }
 }
 
-@media (width >= 960px) {
+@media (width >=960px) {
   .container {
     max-width: 960px;
   }
 }
 
-@media (width >= 1140px) {
+@media (width >=1140px) {
   .container {
     max-width: 1140px;
   }
 }
 
-@media (width >= 1320px) {
+@media (width >=1320px) {
   .container {
     max-width: 1320px;
   }
@@ -112,7 +113,7 @@
 }
 
 .whatsapp-cta {
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0px 0px 4px #fff;
 }
 
 .sticky {
@@ -134,11 +135,11 @@
   background-color: var(--color-dark);
 }
 
-.sticky #navbarCollapse li > a {
+.sticky #navbarCollapse li>a {
   color: var(--color-dark);
 }
 
-.sticky #navbarCollapse li > a:hover {
+.sticky #navbarCollapse li>a:hover {
   color: var(--color-primary);
   opacity: 1;
 }
@@ -152,16 +153,16 @@
   opacity: 1;
 }
 
-.navbarTogglerActive > span:nth-child(1) {
+.navbarTogglerActive>span:nth-child(1) {
   top: 7px;
   rotate: 45deg;
 }
 
-.navbarTogglerActive > span:nth-child(2) {
+.navbarTogglerActive>span:nth-child(2) {
   opacity: 0;
 }
 
-.navbarTogglerActive > span:nth-child(3) {
+.navbarTogglerActive>span:nth-child(3) {
   top: -8px;
   rotate: 135deg;
 }
