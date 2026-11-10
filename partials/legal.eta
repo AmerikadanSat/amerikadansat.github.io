@@ -1,7 +1,7 @@
 <%
 const legalIntro = it.legalIntro ?? "Bu sayfanın içeriği hazırlanmaktadır.";
 const legalDetails = it.legalDetails ?? "Kısa süre içinde güncel metin bu sayfada yayınlanacaktır. Bu süreçte sorularınız için bizimle iletişime geçebilirsiniz.";
-const whatsappHref = "https://wa.me/12017579253?text=Merhaba%2C%20yasal%20bilgilendirme%20sayfalar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
+const whatsappHref = "https://wa.me/15551234567?text=Merhaba%2C%20yasal%20bilgilendirme%20sayfalar%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.";
 %>
 <section class="bg-white pb-20 pt-10 lg:pb-[110px] lg:pt-16">
   <div class="container px-4 mx-auto">
