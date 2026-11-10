@@ -1,0 +1,18 @@
+<% const page={ "language" : "tr" , ...it }; %>
+<!DOCTYPE html>
+<html lang="<%= page.language %>" class="scroll-smooth">
+	<%~ include("./head", page) %>
+
+	<body>
+		<%~ include("./navigation", page) %>
+		<main>
+			<%~ it.body %>
+		</main>
+		<%~ include("./footer", page) %>
+
+		<script src="/js/wow.min.js" defer></script>
+		<script src="/js/swiper-bundle.min.js" defer></script>
+		<script src="/js/site.js" defer></script>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+<%
+page = {
+    "title": "Kullanım Şartları | Amerika'dan Sat",
+    "description": "Amerika'dan Sat kullanım şartları. Hizmetlerin kullanımına ilişkin hak ve yükümlülükler.",
+    "language": "tr",
+    "banner": {
+        "title": "Kullanım Şartları",
+        "description": "Hizmetlerimizin kullanım koşullarına ilişkin güncel metin yakında yayınlanacaktır.",
+        "breadcrumb": "Kullanım Şartları",
+        "homeLabel": "Anasayfa"
+    },
+    "legalIntro": "Kullanım şartlarımız hazırlanmaktadır.",
+    "legalDetails": "Hizmetlerimizin kullanımına ilişkin hak ve yükümlülükler, kullanıcı sorumlulukları ve hizmet koşulları hakkında ayrıntılar yakında bu sayfada yer alacaktır.",
+    ...it
+};
+%>
+<% layout("../../layouts/default", page) %>
+<%~ include("../../partials/banner", page) %>
+<%~ include("../../partials/legal", page) %>

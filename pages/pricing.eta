@@ -1,0 +1,15 @@
+<%
+page = {
+    "title": "Pricing",
+    "description": "Compare Amerika'dan Sat's pricing plans for startups, SaaS products, and apps.",
+    "language": "en",
+    "banner": {
+        "title": "Pricing Page",
+        "breadcrumb": "Pricing"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/pricing", page) %>

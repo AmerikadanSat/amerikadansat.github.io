@@ -1,0 +1,15 @@
+<%~ include("/partials/hero", page) %>
+<!--
+<%~ include("/partials/features", page) %>
+-->
+<%~ include("/partials/about", page) %>
+<%~ include("/partials/cta", page) %>
+<!--
+<%~ include("/partials/pricing", page) %>
+<%~ include("/partials/testimonials", page) %>
+<%~ include("/partials/faq", page) %>
+<%~ include("/partials/team", page) %>
+<%~ include("/partials/blog", page) %>
+-->
+<%~ include("/partials/contact", page) %>
+<%~ include("/partials/brands", page) %>

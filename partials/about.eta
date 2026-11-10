@@ -1,0 +1,79 @@
+<section id="about" class="bg-gray-1 pb-12 pt-20 lg:pb-[90px] lg:pt-[120px]">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap items-center -mx-4">
+      <div class="w-full px-4 lg:w-1/2">
+        <div class="mb-12 max-w-[560px] lg:mb-0">
+          <span class="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
+            <span class="h-2 w-2 rounded-full bg-primary"></span>
+            ABD Pazarı
+          </span>
+          <h2 class="mb-5 text-3xl font-bold leading-tight text-dark sm:text-[40px] sm:leading-[1.2]">
+            ABD Pazarında Yeni Büyüme Fırsatlarını Keşfedin.
+          </h2>
+          <p class="mb-5 text-base leading-relaxed text-body-color">
+            ABD, e-ticaret işletmeleri için geniş müşteri kitlesi ve farklı
+            satış fırsatları sunan önemli pazarlardan biridir. Türkiye'de
+            kurduğunuz işinizi bu pazara taşımak ise şirket kuruluşundan satış
+            kanallarına, finansal işlemlerden lojistiğe kadar farklı süreçlerin
+            doğru şekilde yönetilmesini gerektirir.
+          </p>
+          <p class="mb-9 text-base leading-relaxed text-body-color">
+            Amerika'dan Sat, bu süreçlerde ihtiyaç duyduğunuz hizmetleri ve
+            uzman çözüm ortaklarını bir araya getirerek ABD pazarına açılmanızı
+            kolaylaştırır.
+          </p>
+
+          <a
+            href="/hizmetlerimiz/"
+            class="group inline-flex items-center justify-center gap-2 rounded-md border border-primary bg-primary px-7 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:border-blue-dark hover:bg-blue-dark"
+          >
+            Hizmetlerimizi Keşfedin
+            <span class="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              <%~ include("/partials/icons/arrow-right", page) %>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="w-full px-4 lg:w-1/2">
+        <div class="relative mx-auto max-w-[560px] lg:ml-auto lg:mr-0">
+          <div class="overflow-hidden rounded-2xl">
+            <img
+              src="/images/about/about-new-york.jpg"
+              alt="New York şehir silueti ve gökdelenleri"
+              class="h-[420px] w-full object-cover object-center sm:h-[520px] lg:h-[600px]"
+              width="1200"
+              height="1500"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-xl bg-white/95 px-4 py-3 shadow-lg backdrop-blur sm:bottom-7 sm:left-7 sm:right-auto sm:px-5">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-white">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+                <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8" />
+              </svg>
+            </span>
+            <span>
+              <span class="block text-sm font-semibold text-dark">New York, ABD</span>
+              <span class="block text-xs text-body-color">Yeni pazarınıza açılan kapı</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

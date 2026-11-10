@@ -1,15 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://AmerikadanSat.com/en/</loc>
-    <lastmod>2026-11-02T15:35:36.469Z</lastmod>
+    <loc>https://AmerikadanSat.com/blog-details.html</loc>
+    <lastmod>2026-11-10T13:33:14.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/signup.html</loc>
+    <lastmod>2026-11-10T13:33:14.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/blog-grids.html</loc>
+    <lastmod>2026-11-10T13:33:14.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/yasal-bildirim/</loc>
+    <lastmod>2026-11-10T13:33:14.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/signin.html</loc>
+    <lastmod>2026-11-10T13:33:14.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/about.html</loc>
+    <lastmod>2026-11-10T13:33:14.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/gizlilik-politikasi/</loc>
+    <lastmod>2026-11-10T13:33:14.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/kullanim-sartlari/</loc>
+    <lastmod>2026-11-10T13:33:14.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/pricing.html</loc>
+    <lastmod>2026-11-10T13:33:14.529Z</lastmod>
   </url>
   <url>
     <loc>https://AmerikadanSat.com/</loc>
-    <lastmod>2026-11-02T15:35:36.468Z</lastmod>
+    <lastmod>2026-11-10T13:33:14.529Z</lastmod>
   </url>
   <url>
-    <loc>https://AmerikadanSat.com/tr/</loc>
-    <lastmod>2026-11-02T15:35:36.470Z</lastmod>
+    <loc>https://AmerikadanSat.com/404.html</loc>
+    <lastmod>2026-11-10T13:33:14.527Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/contact.html</loc>
+    <lastmod>2026-11-10T13:33:14.528Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AmerikadanSat.com/hakkimizda/</loc>
+    <lastmod>2026-11-10T13:33:14.529Z</lastmod>
   </url>
 </urlset>

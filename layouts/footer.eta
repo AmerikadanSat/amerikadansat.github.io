@@ -1,0 +1,140 @@
+<%
+const corporateLinks = [
+  { label: "Anasayfa", href: "/" },
+  { label: "Hakkımızda", href: "/hakkimizda/" },
+  { label: "Hizmetlerimiz", href: "/hizmetlerimiz/" },
+  { label: "Nasıl Çalışıyoruz?", href: "/nasil-calisiyoruz/" }
+];
+const libraryLinks = [
+  { label: "Sıkça Sorulan Sorular", href: "/sikca-sorulan-sorular/" },
+  { label: "Terimler Sözlüğü", href: "/terimler-sozlugu/" },
+  { label: "ABD ithalat Klavuzu", href: "/abd-ithalat-klavuzu/" },
+  { label: "ABD ithalat tarifeleri", href: "/abd-ithalat-tarifeleri/" }
+];
+const legalLinks = [
+  { label: "Gizlilik Politikası", href: "/gizlilik-politikasi/" },
+  { label: "Yasal Bildirim", href: "/yasal-bildirim/" },
+  { label: "Kullanım Şartları", href: "/kullanim-sartlari/" }
+];
+const contactLinks = [
+  { label: "Email", href: "mailto:bilgi@amerikadansat.com?subject=G%C3%B6r%C3%BC%C5%9Fme%20Talebi&body=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz.", icon: "footer-email" },
+  { label: "WhatsApp", href: "https://wa.me/15551234567?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz.", icon: "footer-whatsapp" },
+  { label: "X.com", href: "https://x.com/AmerikadanSat", icon: "footer-x" },
+  { label: "Instagram", href: "https://www.instagram.com/AmerikadanSat/", icon: "footer-instagram" }
+];
+%>
+<footer class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
+  <div class="container px-4 mx-auto">
+    <div class="flex flex-wrap -mx-4">
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full mb-10">
+          <a href="/" class="mb-6 inline-block max-w-[160px]" aria-label="Amerika'dan Sat Anasayfa">
+            <img src="/images/logo/amerikadansat-white-text-logo.svg" alt="Amerika'dan Sat" class="max-w-full" width="132" height="46" />
+          </a>
+          <p class="mb-8 max-w-[300px] text-base text-gray-7">
+            Türkiye'deki işletmelerin ABD pazarına açılması için ihtiyaç
+            duyduğu hizmetleri ve çözüm ortaklarını tek noktada sunuyoruz.
+          </p>
+        </div>
+      </div>
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full mb-10">
+          <h4 class="text-lg font-semibold text-white mb-9">Kurumsal</h4>
+          <ul>
+            <% corporateLinks.forEach(function (link) { %>
+              <li>
+                <a href="<%= link.href %>" class="inline-block mb-3 text-base text-gray-7 hover:text-primary"><%= link.label %></a>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full mb-10">
+          <h4 class="text-lg font-semibold text-white mb-9">Kütüphane</h4>
+          <ul>
+            <% libraryLinks.forEach(function (link) { %>
+              <li>
+                <a href="<%= link.href %>" class="inline-block mb-3 text-base text-gray-7 hover:text-primary"><%= link.label %></a>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+      <div class="w-full px-4 sm:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full mb-10">
+          <h4 class="text-lg font-semibold text-white mb-9">İletişim</h4>
+          <ul>
+            <% contactLinks.forEach(function (link) { %>
+              <li>
+                <a
+                  href="<%= link.href %>"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mb-3 inline-flex items-center gap-2 text-base text-gray-7 hover:text-white"
+                  aria-label="Amerika'dan Sat <%= link.label %>"
+                >
+                  <span class="flex h-[22px] w-[22px] shrink-0 items-center justify-center">
+                    <%~ include(`/partials/icons/${link.icon}`, page) %>
+                  </span>
+                  <%= link.label %>
+                </a>
+              </li>
+            <% }); %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-12 border-t border-[#8890A4]/40 py-8 lg:mt-[60px]">
+    <div class="container px-4 mx-auto">
+      <div class="flex flex-wrap -mx-4">
+        <div class="w-full px-4 md:w-2/3 lg:w-1/2">
+          <div class="my-1">
+            <div class="flex flex-wrap items-center justify-center -mx-3 md:justify-start">
+              <% legalLinks.forEach(function (link) { %>
+                <a
+                  href="<%= link.href %>"
+                  class="px-3 text-base text-gray-7 hover:text-white hover:underline"
+                ><%= link.label %></a>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4 md:w-1/3 lg:w-1/2">
+          <div class="flex justify-center my-1 md:justify-end">
+            <p class="text-base text-center text-gray-7 md:text-left">
+              &copy; 2021-2026
+              <a
+                href="https://AmerikadanSat.com"
+                rel="nofollow noopener"
+                class="text-gray-1 hover:underline">Amerika'dan Sat LLC</a>
+              . Tüm hakları saklıdır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <span class="absolute left-0 top-0 z-[-1]">
+      <img src="/images/footer/shape-1.svg" alt="" />
+    </span>
+    <span class="absolute bottom-0 right-0 z-[-1]">
+      <img src="/images/footer/shape-3.svg" alt="" />
+    </span>
+    <span class="absolute right-0 top-0 z-[-1]">
+      <%~ include("/partials/icons/footer-dots", page) %>
+    </span>
+  </div>
+</footer>
+
+<a
+  href="#home"
+  class="fixed left-auto items-center justify-center hidden w-10 h-10 text-white transition duration-300 ease-in-out rounded-md shadow-md back-to-top bottom-8 right-8 z-999 bg-primary hover:bg-dark"
+  aria-label="Başa dön"
+>
+  <span class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
+</a>

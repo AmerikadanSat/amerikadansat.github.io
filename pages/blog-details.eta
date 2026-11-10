@@ -1,0 +1,15 @@
+<%
+page = {
+    "title": "Blog Details",
+    "description": "Read the full article on building better products and experiences with Amerika'dan Sat.",
+    "language": "en",
+    "banner": {
+        "title": "Blog Details",
+        "breadcrumb": "Blog Details"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/blog-details", page) %>

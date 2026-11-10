@@ -2,7 +2,7 @@
 
 ## Project
 
-AmerikadanSat website (`https://amerikadansat.com`).
+AmerikadanSat website (`https://AmerikadanSat.com`).
 
 The website uses [**Eta.js**](https://eta.js.org/) as its templating engine and [**Bun**](https://bun.com/) as its JavaScript runtime, package manager, and test runner.
 

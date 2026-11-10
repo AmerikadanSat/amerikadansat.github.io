@@ -1,0 +1,15 @@
+<%
+page = {
+    "title": "Contact",
+    "description": "Get in touch with the Amerika'dan Sat team about your next startup, SaaS, or app project.",
+    "language": "en",
+    "banner": {
+        "title": "Contact Page",
+        "breadcrumb": "Contact us"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/contact", page) %>

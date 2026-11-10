@@ -1,0 +1,16 @@
+<%
+page = {
+    "title": "Sign Up",
+    "description": "Create your Amerika'dan Sat account.",
+    "language": "en",
+    "authMode": "signup",
+    "banner": {
+        "title": "Sign Up Page",
+        "breadcrumb": "Sign Up"
+    },
+    ...it
+};
+%>
+<% layout("../layouts/default", page) %>
+<%~ include("/partials/banner", page) %>
+<%~ include("/partials/auth", page) %>

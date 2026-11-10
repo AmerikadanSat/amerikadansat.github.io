@@ -1,0 +1,34 @@
+<section id="home" class="relative isolate flex min-h-svh flex-col justify-center overflow-hidden bg-primary">
+  <div class="container relative z-10 px-4 mx-auto">
+    <div class="flex flex-wrap items-center -mx-4 py-24 md:py-32">
+      <div class="w-full px-4 lg:w-9/12">
+        <div class="hero-content mx-auto max-w-[620px] text-center md:max-w-none lg:mx-0 lg:max-w-[820px] lg:text-left">
+          <h1 class="mb-6 text-[32px] font-bold leading-[1.2] text-white sm:text-4xl md:text-5xl md:leading-[1.15] xl:text-[54px]">
+            ABD'de Başarıya Adım Atın!
+          </h1>
+          <p class="mx-auto mb-9 text-balance text-base font-medium leading-relaxed text-white/80 sm:text-lg sm:leading-[1.6] md:max-w-none lg:mx-0">
+            Amerika'dan Sat ile ABD pazarında e-ticaret işinizi kolayca başlatın, güvenle büyütün.
+            <br /><br />
+            Şirket kuruluşundan e-ticaret altyapısına, depolamadan sipariş gönderimine kadar ihtiyaç duyduğunuz tüm çözümler tek noktada.
+          </p>
+          <div class="flex flex-col items-stretch justify-center gap-4 sm:flex-row sm:items-center lg:justify-start">
+            <a href="/hizmetlerimiz/" class="inline-flex items-center justify-center gap-2 rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-primary shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-dark">
+              Hizmetlerimizi Keşfedin
+            </a>
+            <a href="https://wa.me/15551234567?text=Merhaba%2C%20sizinle%20en%20k%C4%B1sa%20zamanda%20k%C4%B1sa%20bir%20g%C3%B6r%C3%BC%C5%9Fme%20yapmak%20isterim.%20Size%20uygun%20olan%20g%C3%BCn%20ve%20saatleri%20payla%C5%9Fabilir%20misiniz." target="_blank" rel="noopener noreferrer" class="whatsapp-cta inline-flex items-center justify-center gap-2 rounded-md bg-whatsapp px-6 py-[14px] text-base font-medium text-black transition duration-300 ease-in-out hover:bg-whatsapp-dark">
+              <img src="/images/whatsapp-icon.svg" alt="" class="h-5 w-5" width="20" height="20" aria-hidden="true" />
+              Hemen Konuşalım
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div aria-hidden="true" class="pointer-events-none relative hidden h-56 w-full bg-[url(/images/hero-bg.png)] bg-cover bg-right bg-no-repeat opacity-80 [mask-image:linear-gradient(to_left,black_45%,transparent_100%)] lg:absolute lg:inset-y-0 lg:right-0 lg:block lg:h-full lg:w-[62%] lg:opacity-90 xl:w-[58%]">
+    <div class="absolute inset-x-0 top-0 hidden h-48 bg-linear-to-b from-primary via-primary/60 to-transparent lg:block"></div>
+    <div class="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-primary to-transparent"></div>
+  </div>
+
+  <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 z-[5] hidden w-1/2 bg-linear-to-r from-primary to-transparent lg:block"></div>
+</section>
