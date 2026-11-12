@@ -1,0 +1,49 @@
+<%
+page = {
+    "title": "Hakkımızda",
+    "description": "Amerika'dan Sat hakkında bilgi edinin.",
+    "language": "tr",
+    "banner": {
+        "title": "Hakkımızda",
+        "breadcrumb": "Hakkımızda"
+    },
+    ...it
+};
+%>
+<% layout("../../layouts/default", page) %>
+<%~ include("../../partials/banner", page) %>
+
+<div class="row mb-5">
+    <div class="order-2 order-lg-1 col-12 col-lg-7">
+        <p><span class="company-name">Amerika'dan Sat</span>, Bilkent ve ODTÜ'de mühendislik eğitimi aldıktan sonra
+            çeyrek asır önce Amerika Birleşik Devletleri'ne yerleşen bir baba-oğul tarafından, Kuzey Amerika'daki
+            perakende satış, teknoloji ve e-ticaret alanlarındaki geniş deneyimlerini, Türk girişimcilerin Kuzey Amerika
+            pazarına açılmalarına destek olmak amacıyla, 2021 yılında Florida eyaletinde kurulmuştur.
+        </p>
+    </div>
+    <div class="order-1 order-lg-2 col-12 col-lg-5">
+        <img class="img-fluid" src="https://placehold.co/600x300" alt="">
+    </div>
+</div>
+<div class="row">
+    <div class="order-1 order-lg-1 col-12 col-lg-5">
+        <img class="img-fluid" src="https://placehold.co/600x300" alt="">
+    </div>
+    <div class="order-2 order-lg-2 col-12 col-lg-7">
+        <p>Şirketin kurucuları, <span class="company-name">Amerika'dan Sat</span> öncesinde, New York eyaletinde
+            yenilikçi bir e-ticaret pazarlama ağı olan Arteria Networks'ün kurucu ekibinde yer almışlardır. Bu girişim,
+            e-ticaret şirketlerinin gönderdiği kutulardaki boşlukları örnek ürünler, basılı reklam malzemeleri ve
+            eşantiyon ürünlerle doldurarak ek gelir elde etmelerini sağlıyordu. Bu projeden önce de kutu üyeliği temelli
+            başka bir e-ticaret girişiminde bulunarak, sektörün dinamikleri ve tüketici davranışları hakkında derin bir
+            bilgi sahibi oldular.
+        </p>
+    </div>
+</div>
+<p class="m-md-5"><strong>Teknoloji, e-ticaret ve ABD piyasalarındaki tecrübeleriyle öne çıkan bu ekip, Türkiye'deki
+        girişimcilerin yalnızca Amerika Birleşik Devletleri'ne değil, aynı zamanda ABD üzerinden tüm dünyaya satış
+        yapmalarını kolaylaştırmayı hedeflemektedir.</strong></p>
+<h1 class="display-5">Misyonumuz</h1>
+<p><span class="company-name">Amerika'dan Sat</span> olarak misyonumuz, Türkiye'deki girişimcilerin küresel pazarlarda
+    rekabet edebilmesi için gereken altyapıyı ve desteği sağlamaktır. ABD'de şirket kurulumu, depoloma, lojistik hizmetler,
+    dijital pazarlama ve müşteri desteği gibi ihtiyaç duyulan tüm hizmetleri tek bir çatı altında toplayarak,
+    girişimcilerin Amerika Birleşik Devletleri'ne gelmeden işlerini yönetmelerini mümkün kılıyoruz.</p>
