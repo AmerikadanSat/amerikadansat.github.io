@@ -15,4 +15,6 @@ page = {
 <%~ include("../../partials/banner", page) %>
 <%~ include("../../partials/about", page) %>
 <%~ include("../../partials/cta", page) %>
+<!--
 <%~ include("../../partials/team", page) %>
+-->
