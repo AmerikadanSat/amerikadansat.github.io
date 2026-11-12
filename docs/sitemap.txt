@@ -1,5 +1,6 @@
 https://AmerikadanSat.com/blog-details.html
 https://AmerikadanSat.com/signup.html
+https://AmerikadanSat.com/hakkimizdaX/
 https://AmerikadanSat.com/blog-grids.html
 https://AmerikadanSat.com/yasal-bildirim/
 https://AmerikadanSat.com/signin.html
@@ -10,4 +11,3 @@ https://AmerikadanSat.com/pricing.html
 https://AmerikadanSat.com/
 https://AmerikadanSat.com/404.html
 https://AmerikadanSat.com/contact.html
-https://AmerikadanSat.com/hakkimizda/
